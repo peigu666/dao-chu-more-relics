@@ -159,5 +159,285 @@
     "DESCRIPTIONS": [
       "If you end your turn with no cards in hand, gain #b1 Energy and draw #b1 card at the start of your next turn."
     ]
+  },
+  "SpireOddities:OldMatchbox": {
+    "NAME": "Old Matchbox",
+    "FLAVOR": "A small spark is enough to light a turn.",
+    "DESCRIPTIONS": [
+      "The first time you play a card costing #b2 or more each turn, gain #b3 Block."
+    ]
+  },
+  "SpireOddities:SplitBuckle": {
+    "NAME": "Split Buckle",
+    "FLAVOR": "The weakest place takes the weight first.",
+    "DESCRIPTIONS": [
+      "The first time your Block is broken each turn, gain #b1 Strength."
+    ]
+  },
+  "SpireOddities:WaxedCharm": {
+    "NAME": "Waxed Charm",
+    "FLAVOR": "Wax seals the crack, and the hesitation.",
+    "DESCRIPTIONS": [
+      "The first time you manually discard a card each turn, gain #b3 Block."
+    ]
+  },
+  "SpireOddities:IronRing": {
+    "NAME": "Iron Ring",
+    "FLAVOR": "It is not pretty, but it does not let go easily.",
+    "DESCRIPTIONS": [
+      "The first time you lose HP each turn, gain #b2 Block."
+    ]
+  },
+  "SpireOddities:TornCoinpurse": {
+    "NAME": "Torn Coinpurse",
+    "FLAVOR": "Every fallen coin leaves a mark.",
+    "DESCRIPTIONS": [
+      "Whenever you gain Gold, gain #b1 Block."
+    ]
+  },
+  "SpireOddities:AshenNeedle": {
+    "NAME": "Ashen Needle",
+    "FLAVOR": "A thread of cold ash hides in its eye.",
+    "DESCRIPTIONS": [
+      "The first time you play a 0-cost card each turn, draw #b1 card."
+    ]
+  },
+  "SpireOddities:SaltedRation": {
+    "NAME": "Salted Ration",
+    "FLAVOR": "Salt reminds you that you are still alive.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, heal #b2 HP."
+    ]
+  },
+  "SpireOddities:CrackedLens": {
+    "NAME": "Cracked Lens",
+    "FLAVOR": "The crack reveals what should stay hidden.",
+    "DESCRIPTIONS": [
+      "The first time you draw a Status or Curse each turn, gain #b3 Block."
+    ]
+  },
+  "SpireOddities:SewnPocket": {
+    "NAME": "Sewn Pocket",
+    "FLAVOR": "The stitches are stuffed with things never thrown away.",
+    "DESCRIPTIONS": [
+      "At the end of your turn, if your discard pile has #b5 or more cards, gain #b2 Block."
+    ]
+  },
+  "SpireOddities:BrassPin": {
+    "NAME": "Brass Pin",
+    "FLAVOR": "Pin one corner and the whole garment stays together.",
+    "DESCRIPTIONS": [
+      "The first time you play a Skill each combat, gain #b1 Dexterity."
+    ]
+  },
+  "SpireOddities:HeavyBookmark": {
+    "NAME": "Heavy Bookmark",
+    "FLAVOR": "It holds down a page and a stack of unread cards.",
+    "DESCRIPTIONS": [
+      "At the start of your turn, if your draw pile has #b10 or more cards, draw #b1 card."
+    ]
+  },
+  "SpireOddities:PocketSand": {
+    "NAME": "Pocket Sand",
+    "FLAVOR": "The last handful is always the brightest.",
+    "DESCRIPTIONS": [
+      "The first time you become Bloodied each combat, deal #b5 damage to ALL enemies."
+    ]
+  },
+  "SpireOddities:CorkStub": {
+    "NAME": "Cork Stub",
+    "FLAVOR": "It plugs the bottle and a little bit of panic.",
+    "DESCRIPTIONS": [
+      "The first Potion you use each combat gives you #b3 Block."
+    ]
+  },
+  "SpireOddities:CopperButton": {
+    "NAME": "Copper Button",
+    "FLAVOR": "Before it falls, it still makes a sound.",
+    "DESCRIPTIONS": [
+      "At the end of your turn, if you have no Energy, gain #b3 Block."
+    ]
+  },
+  "SpireOddities:MirrorShard": {
+    "NAME": "Mirror Shard",
+    "FLAVOR": "A broken mirror still reflects.",
+    "DESCRIPTIONS": [
+      "The first time you take attack damage each combat, gain #b1 Energy."
+    ]
+  },
+  "SpireOddities:BlackenedCoin": {
+    "NAME": "Blackened Coin",
+    "FLAVOR": "After burning, it learned to value its weight.",
+    "DESCRIPTIONS": [
+      "Whenever you spend Gold, gain #b3 Block."
+    ]
+  },
+  "SpireOddities:TravelerToken": {
+    "NAME": "Traveler's Token",
+    "FLAVOR": "Every road deserves a small keepsake.",
+    "DESCRIPTIONS": [
+      "After you win a combat, gain #b5 Gold."
+    ]
+  },
+  "SpireOddities:CrumpledMap": {
+    "NAME": "Crumpled Map",
+    "FLAVOR": "The creases mark roads best left behind.",
+    "DESCRIPTIONS": [
+      "After entering an Elite room, gain #b1 Strength at the start of that combat."
+    ]
+  },
+  "SpireOddities:HollowQuill": {
+    "NAME": "Hollow Quill",
+    "FLAVOR": "It cannot write answers, only count them.",
+    "DESCRIPTIONS": [
+      "The 5th card you draw each turn grants you #b2 Block."
+    ]
+  },
+  "SpireOddities:CorkedVial": {
+    "NAME": "Corked Vial",
+    "FLAVOR": "The cork remains, but the contents are long gone.",
+    "DESCRIPTIONS": [
+      "The first Potion you use each combat draws #b1 card and grants #b3 Block."
+    ]
+  },
+  "SpireOddities:ThreadedNeedle": {
+    "NAME": "Threaded Needle",
+    "FLAVOR": "It sharpens on the third pass through the cloth.",
+    "DESCRIPTIONS": [
+      "Every 3rd card you manually discard gives you #b1 Dexterity."
+    ]
+  },
+  "SpireOddities:SootyMirror": {
+    "NAME": "Sooty Mirror",
+    "FLAVOR": "Wipe away the soot before looking too closely.",
+    "DESCRIPTIONS": [
+      "At the start of your turn, if your HP is at or below half, draw #b1 card."
+    ]
+  },
+  "SpireOddities:CeramicLocket": {
+    "NAME": "Ceramic Locket",
+    "FLAVOR": "A thin shard of clay can still stop something.",
+    "DESCRIPTIONS": [
+      "The first time your HP falls to half or less each combat, gain #b6 Block."
+    ]
+  },
+  "SpireOddities:BrassHourglass": {
+    "NAME": "Brass Hourglass",
+    "FLAVOR": "The sand falls as the deck folds back together.",
+    "DESCRIPTIONS": [
+      "Whenever you shuffle your draw pile, gain #b2 Block."
+    ]
+  },
+  "SpireOddities:RationTin": {
+    "NAME": "Ration Tin",
+    "FLAVOR": "The last bite belongs to the worst battle.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, gain #b5 Block."
+    ]
+  },
+  "SpireOddities:BrokenDie": {
+    "NAME": "Broken Die",
+    "FLAVOR": "It broke, so every face looks like a chance.",
+    "DESCRIPTIONS": [
+      "The chance of finding Rare cards in Card Rewards is increased by #b3%."
+    ]
+  },
+  "SpireOddities:PolishedStone": {
+    "NAME": "Polished Stone",
+    "FLAVOR": "Its shine comes from being held tight countless times.",
+    "DESCRIPTIONS": [
+      "The first time you gain Block each turn, draw #b1 card."
+    ]
+  },
+  "SpireOddities:EmptyBell": {
+    "NAME": "Empty Bell",
+    "FLAVOR": "With no sound, the next card is easier to hear.",
+    "DESCRIPTIONS": [
+      "If your hand is empty after drawing at the start of your turn, gain #b1 Energy."
+    ]
+  },
+  "SpireOddities:MirrorShield": {
+    "NAME": "Mirror Shield",
+    "FLAVOR": "It reflects an enemy's motion, not all of its force.",
+    "DESCRIPTIONS": [
+      "The first time your Block is broken each turn, deal #b6 damage to ALL enemies."
+    ]
+  },
+  "SpireOddities:SilverThread": {
+    "NAME": "Silver Thread",
+    "FLAVOR": "Silver does not break; it spreads the weight.",
+    "DESCRIPTIONS": [
+      "The first time you gain #b15 or more Block at once each turn, draw #b1 card."
+    ]
+  },
+  "SpireOddities:RoyalSeal": {
+    "NAME": "Royal Seal",
+    "FLAVOR": "Once the first line is stamped, the rest follows.",
+    "DESCRIPTIONS": [
+      "At the start of combat, draw #b1 additional card."
+    ]
+  },
+  "SpireOddities:BloodLedger": {
+    "NAME": "Blood Ledger",
+    "FLAVOR": "Every loss leaves a useful number behind.",
+    "DESCRIPTIONS": [
+      "The first time you lose HP each turn, gain #b1 Energy."
+    ]
+  },
+  "SpireOddities:CagedSpark": {
+    "NAME": "Caged Spark",
+    "FLAVOR": "It counts the bars and waits for the fifth flicker.",
+    "DESCRIPTIONS": [
+      "Every 5 cards you play in a turn, gain #b1 Energy and draw #b1 card."
+    ]
+  },
+  "SpireOddities:StanceTalisman": {
+    "NAME": "Stance Talisman",
+    "FLAVOR": "Change means more after you have found your footing.",
+    "DESCRIPTIONS": [
+      "The first time you change Stances each turn, gain #b3 Block."
+    ]
+  },
+  "SpireOddities:OrbEmblem": {
+    "NAME": "Orb Emblem",
+    "FLAVOR": "It glimmers when each little sphere goes dark.",
+    "DESCRIPTIONS": [
+      "The first time you Evoke an Orb each turn, gain #b3 Block."
+    ]
+  },
+  "SpireOddities:GildedScissors": {
+    "NAME": "Gilded Scissors",
+    "FLAVOR": "Cut one card and a path opens with it.",
+    "DESCRIPTIONS": [
+      "The first time you Exhaust a card each combat, gain #b1 Energy and draw #b2 cards."
+    ]
+  },
+  "SpireOddities:CompassRose": {
+    "NAME": "Compass Rose",
+    "FLAVOR": "The most dangerous road bears a pattern of its own.",
+    "DESCRIPTIONS": [
+      "After entering an Elite room, gain #b1 Energy at the start of that combat."
+    ]
+  },
+  "SpireOddities:DawnLantern": {
+    "NAME": "Dawn Lantern",
+    "FLAVOR": "It lights only when the battle begins.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, gain #b1 Energy."
+    ]
+  },
+  "SpireOddities:SilverScale": {
+    "NAME": "Silver Scale",
+    "FLAVOR": "One flash, and the blade slips aside.",
+    "DESCRIPTIONS": [
+      "The first time you take attack damage each turn, reduce it by #b3."
+    ]
+  },
+  "SpireOddities:SilentLedger": {
+    "NAME": "Silent Ledger",
+    "FLAVOR": "It records what you chose not to spend.",
+    "DESCRIPTIONS": [
+      "If you end your turn with no Energy, draw #b2 cards at the start of your next turn."
+    ]
   }
 }

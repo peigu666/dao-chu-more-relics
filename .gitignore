@@ -1,6 +1,9 @@
 # Generated build output and previews
 work/SpireOddities/build/
 work/SpireOddities/art-preview.png
+work/SpireOddities/art-preview-new.png
+work/SpireOddities/art-cutout/
+work/SpireOddities/art-cutout-test/
 
 # Local tooling and IDE files
 work/tooling/

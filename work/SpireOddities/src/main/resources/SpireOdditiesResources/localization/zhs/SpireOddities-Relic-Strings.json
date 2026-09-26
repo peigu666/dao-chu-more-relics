@@ -159,5 +159,285 @@
     "DESCRIPTIONS": [
       "如果你回合结束时没有手牌，在下回合开始时获得 #b1 点能量并抽 #b1 张牌。"
     ]
+  },
+  "SpireOddities:OldMatchbox": {
+    "NAME": "旧火柴盒",
+    "FLAVOR": "火星很小，但足以点燃一回合。",
+    "DESCRIPTIONS": [
+      "每回合第一次打出费用至少为 #b2 的牌时，获得 #b3 点格挡。"
+    ]
+  },
+  "SpireOddities:SplitBuckle": {
+    "NAME": "裂开的扣环",
+    "FLAVOR": "坏掉的地方往往最先承受重量。",
+    "DESCRIPTIONS": [
+      "每回合第一次格挡被打破时，获得 #b1 点力量。"
+    ]
+  },
+  "SpireOddities:WaxedCharm": {
+    "NAME": "涂蜡护符",
+    "FLAVOR": "蜡封住了裂口，也封住了犹豫。",
+    "DESCRIPTIONS": [
+      "每回合第一次手动弃牌时，获得 #b3 点格挡。"
+    ]
+  },
+  "SpireOddities:IronRing": {
+    "NAME": "铁制指环",
+    "FLAVOR": "它不漂亮，但不会轻易脱落。",
+    "DESCRIPTIONS": [
+      "每回合第一次失去生命时，获得 #b2 点格挡。"
+    ]
+  },
+  "SpireOddities:TornCoinpurse": {
+    "NAME": "破口钱袋",
+    "FLAVOR": "漏掉的每一枚硬币都留下了痕迹。",
+    "DESCRIPTIONS": [
+      "每当你获得金币时，获得 #b1 点格挡。"
+    ]
+  },
+  "SpireOddities:AshenNeedle": {
+    "NAME": "灰针",
+    "FLAVOR": "针眼里藏着一缕冷灰。",
+    "DESCRIPTIONS": [
+      "每回合第一次打出 0 费牌时，抽 #b1 张牌。"
+    ]
+  },
+  "SpireOddities:SaltedRation": {
+    "NAME": "盐渍干粮",
+    "FLAVOR": "咸味能提醒人还活着。",
+    "DESCRIPTIONS": [
+      "每场战斗开始时，回复 #b2 点生命。"
+    ]
+  },
+  "SpireOddities:CrackedLens": {
+    "NAME": "裂纹镜片",
+    "FLAVOR": "裂痕让不该看见的东西显形。",
+    "DESCRIPTIONS": [
+      "每回合第一次抽到状态牌或诅咒牌时，获得 #b3 点格挡。"
+    ]
+  },
+  "SpireOddities:SewnPocket": {
+    "NAME": "缝补口袋",
+    "FLAVOR": "缝线里塞满了没来得及丢掉的东西。",
+    "DESCRIPTIONS": [
+      "回合结束时，如果你的弃牌堆至少有 #b5 张牌，获得 #b2 点格挡。"
+    ]
+  },
+  "SpireOddities:BrassPin": {
+    "NAME": "黄铜别针",
+    "FLAVOR": "别住一角，整件衣服就不会散开。",
+    "DESCRIPTIONS": [
+      "每场战斗第一次打出技能牌时，获得 #b1 点敏捷。"
+    ]
+  },
+  "SpireOddities:HeavyBookmark": {
+    "NAME": "厚书签",
+    "FLAVOR": "它压住一页，也压住一叠未读的牌。",
+    "DESCRIPTIONS": [
+      "回合开始时，如果你的抽牌堆至少有 #b10 张牌，抽 #b1 张牌。"
+    ]
+  },
+  "SpireOddities:PocketSand": {
+    "NAME": "一撮砂",
+    "FLAVOR": "最后一把砂总是最刺眼。",
+    "DESCRIPTIONS": [
+      "每场战斗第一次进入濒死状态时，对所有敌人造成 #b5 点伤害。"
+    ]
+  },
+  "SpireOddities:CorkStub": {
+    "NAME": "软木塞",
+    "FLAVOR": "它堵住瓶口，也堵住一点恐慌。",
+    "DESCRIPTIONS": [
+      "每场战斗第一次使用药水时，获得 #b3 点格挡。"
+    ]
+  },
+  "SpireOddities:CopperButton": {
+    "NAME": "铜纽扣",
+    "FLAVOR": "掉下来之前，它还会发出声音。",
+    "DESCRIPTIONS": [
+      "回合结束时，如果你没有能量，获得 #b3 点格挡。"
+    ]
+  },
+  "SpireOddities:MirrorShard": {
+    "NAME": "镜片碎屑",
+    "FLAVOR": "碎镜子仍然会反光。",
+    "DESCRIPTIONS": [
+      "每场战斗第一次受到攻击伤害时，获得 #b1 点能量。"
+    ]
+  },
+  "SpireOddities:BlackenedCoin": {
+    "NAME": "乌黑硬币",
+    "FLAVOR": "烧黑以后，它终于学会珍惜重量。",
+    "DESCRIPTIONS": [
+      "每当你花费金币时，获得 #b3 点格挡。"
+    ]
+  },
+  "SpireOddities:TravelerToken": {
+    "NAME": "旅者信物",
+    "FLAVOR": "每段路都值得收一枚纪念。",
+    "DESCRIPTIONS": [
+      "战斗胜利后，获得 #b5 金币。"
+    ]
+  },
+  "SpireOddities:CrumpledMap": {
+    "NAME": "折叠地图",
+    "FLAVOR": "折痕标记着不该再走的路。",
+    "DESCRIPTIONS": [
+      "进入精英房后，在该场战斗开始时获得 #b1 点力量。"
+    ]
+  },
+  "SpireOddities:HollowQuill": {
+    "NAME": "空心羽管",
+    "FLAVOR": "它写不出答案，只能记下次数。",
+    "DESCRIPTIONS": [
+      "你每回合抽到的第 5 张牌使你获得 #b2 点格挡。"
+    ]
+  },
+  "SpireOddities:CorkedVial": {
+    "NAME": "塞住的药瓶",
+    "FLAVOR": "瓶塞还在，里面的东西却已经用完。",
+    "DESCRIPTIONS": [
+      "每场战斗第一次使用药水时，抽 #b1 张牌并获得 #b3 点格挡。"
+    ]
+  },
+  "SpireOddities:ThreadedNeedle": {
+    "NAME": "穿线针",
+    "FLAVOR": "它只在第三次穿过布料时变得锋利。",
+    "DESCRIPTIONS": [
+      "你手动弃掉的每第 3 张牌使你获得 #b1 点敏捷。"
+    ]
+  },
+  "SpireOddities:SootyMirror": {
+    "NAME": "烟黑镜",
+    "FLAVOR": "看清自己之前，先擦掉烟灰。",
+    "DESCRIPTIONS": [
+      "回合开始时，如果你的生命不超过上限的一半，抽 #b1 张牌。"
+    ]
+  },
+  "SpireOddities:CeramicLocket": {
+    "NAME": "陶瓷护符",
+    "FLAVOR": "薄薄的陶片在裂开前仍能挡住什么。",
+    "DESCRIPTIONS": [
+      "每场战斗第一次生命降至一半或更低时，获得 #b6 点格挡。"
+    ]
+  },
+  "SpireOddities:BrassHourglass": {
+    "NAME": "黄铜沙漏",
+    "FLAVOR": "沙子落下，牌堆重新合拢。",
+    "DESCRIPTIONS": [
+      "每当你洗牌时，获得 #b2 点格挡。"
+    ]
+  },
+  "SpireOddities:RationTin": {
+    "NAME": "口粮罐",
+    "FLAVOR": "罐底的余粮总要留给最糟的一战。",
+    "DESCRIPTIONS": [
+      "每场战斗开始时，获得 #b5 点格挡。"
+    ]
+  },
+  "SpireOddities:BrokenDie": {
+    "NAME": "破骰子",
+    "FLAVOR": "它坏了，所以每一面都像是机会。",
+    "DESCRIPTIONS": [
+      "卡牌奖励中出现稀有牌的概率提高 #b3%。"
+    ]
+  },
+  "SpireOddities:PolishedStone": {
+    "NAME": "磨光石",
+    "FLAVOR": "手心的光泽来自无数次握紧。",
+    "DESCRIPTIONS": [
+      "每回合第一次获得格挡时，抽 #b1 张牌。"
+    ]
+  },
+  "SpireOddities:EmptyBell": {
+    "NAME": "空铃",
+    "FLAVOR": "没有声音，才更容易听见下一张牌。",
+    "DESCRIPTIONS": [
+      "如果你在回合开始抽牌后没有手牌，获得 #b1 点能量。"
+    ]
+  },
+  "SpireOddities:MirrorShield": {
+    "NAME": "镜盾",
+    "FLAVOR": "它映出敌人的动作，却无法替你承受全部。",
+    "DESCRIPTIONS": [
+      "每回合第一次格挡被打破时，对所有敌人造成 #b6 点伤害。"
+    ]
+  },
+  "SpireOddities:SilverThread": {
+    "NAME": "银线",
+    "FLAVOR": "银线不会断，只会把重量分开。",
+    "DESCRIPTIONS": [
+      "每回合第一次一次性获得至少 #b15 点格挡时，抽 #b1 张牌。"
+    ]
+  },
+  "SpireOddities:RoyalSeal": {
+    "NAME": "王室印章",
+    "FLAVOR": "印下第一笔，剩下的便顺理成章。",
+    "DESCRIPTIONS": [
+      "战斗开始时，额外抽 #b1 张牌。"
+    ]
+  },
+  "SpireOddities:BloodLedger": {
+    "NAME": "血账本",
+    "FLAVOR": "每一笔损失都会留下可用的数字。",
+    "DESCRIPTIONS": [
+      "每回合第一次失去生命时，获得 #b1 点能量。"
+    ]
+  },
+  "SpireOddities:CagedSpark": {
+    "NAME": "笼中火花",
+    "FLAVOR": "它数着铁笼的缝隙，等第五次闪烁。",
+    "DESCRIPTIONS": [
+      "每打出 5 张牌时，获得 #b1 点能量并抽 #b1 张牌。"
+    ]
+  },
+  "SpireOddities:StanceTalisman": {
+    "NAME": "姿态护符",
+    "FLAVOR": "站稳之后，改变才有意义。",
+    "DESCRIPTIONS": [
+      "每回合第一次切换姿态时，获得 #b3 点格挡。"
+    ]
+  },
+  "SpireOddities:OrbEmblem": {
+    "NAME": "球体徽章",
+    "FLAVOR": "它在每一颗球体熄灭时微微发亮。",
+    "DESCRIPTIONS": [
+      "每回合第一次激发充能球时，获得 #b3 点格挡。"
+    ]
+  },
+  "SpireOddities:GildedScissors": {
+    "NAME": "镀金剪刀",
+    "FLAVOR": "剪断一张牌，也剪开一条路。",
+    "DESCRIPTIONS": [
+      "每场战斗第一次消耗牌时，获得 #b1 点能量并抽 #b2 张牌。"
+    ]
+  },
+  "SpireOddities:CompassRose": {
+    "NAME": "罗盘玫瑰",
+    "FLAVOR": "最危险的路总有一枚花纹。",
+    "DESCRIPTIONS": [
+      "进入精英房后，在该场战斗开始时获得 #b1 点能量。"
+    ]
+  },
+  "SpireOddities:DawnLantern": {
+    "NAME": "黎明灯",
+    "FLAVOR": "它只在战斗开始时点亮。",
+    "DESCRIPTIONS": [
+      "每场战斗开始时，获得 #b1 点能量。"
+    ]
+  },
+  "SpireOddities:SilverScale": {
+    "NAME": "银鳞",
+    "FLAVOR": "鳞片一闪，锋刃便偏开半寸。",
+    "DESCRIPTIONS": [
+      "每回合第一次受到攻击伤害时，使其降低 #b3 点。"
+    ]
+  },
+  "SpireOddities:SilentLedger": {
+    "NAME": "无声账册",
+    "FLAVOR": "它记下你没有花掉的东西。",
+    "DESCRIPTIONS": [
+      "如果你回合结束时没有能量，在下回合开始时抽 #b2 张牌。"
+    ]
   }
 }
