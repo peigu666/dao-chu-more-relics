@@ -21,7 +21,7 @@ public class ThreadedNeedle extends SpireOdditiesRelic {
         this.counter++;
         if (this.counter >= 3) {
             this.counter = 0;
-            gainDexterity(1);
+            addRandomColorlessCardToHand(0, true);
         }
     }
 

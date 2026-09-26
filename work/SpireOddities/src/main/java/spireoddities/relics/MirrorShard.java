@@ -19,9 +19,11 @@ public class MirrorShard extends SpireOdditiesRelic {
 
     @Override
     public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {
-        if (this.counter == 0 && damageAmount > 0) {
+        if (this.counter == 0
+                && damageAmount > 0
+                && info.type == DamageInfo.DamageType.NORMAL) {
             this.counter = 1;
-            gainEnergy(1);
+            damageAll(4);
         }
         return damageAmount;
     }

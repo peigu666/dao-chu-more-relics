@@ -25,7 +25,7 @@ public class SilverThread extends SpireOdditiesRelic {
     public int onPlayerGainBlock(int blockAmount) {
         if (this.counter == 0 && blockAmount >= 15) {
             this.counter = 1;
-            draw(1);
+            draw(2);
         }
         return blockAmount;
     }

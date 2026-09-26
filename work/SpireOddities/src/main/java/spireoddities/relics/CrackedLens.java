@@ -1,6 +1,8 @@
 package spireoddities.relics;
 
+import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import spireoddities.SpireOddities;
 
@@ -27,7 +29,11 @@ public class CrackedLens extends SpireOdditiesRelic {
         if (this.counter == 0
                 && (card.type == AbstractCard.CardType.STATUS || card.type == AbstractCard.CardType.CURSE)) {
             this.counter = 1;
-            gainBlock(3);
+            card.setCostForTurn(0);
+            card.exhaust = true;
+            trigger();
+            AbstractDungeon.actionManager.addToBottom(
+                    new ExhaustSpecificCardAction(card, AbstractDungeon.player.hand));
         }
     }
 

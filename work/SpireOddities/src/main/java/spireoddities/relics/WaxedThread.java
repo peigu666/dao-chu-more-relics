@@ -17,12 +17,16 @@ public class WaxedThread extends SpireOdditiesRelic {
     }
 
     @Override
-    public void onManualDiscard() {
-        this.counter++;
-        if (this.counter >= 3) {
+    public void atTurnStartPostDraw() {
+        if (this.counter == 1) {
             this.counter = 0;
-            gainEnergy(1);
+            draw(1);
         }
+    }
+
+    @Override
+    public void onManualDiscard() {
+        this.counter = 1;
     }
 
     @Override

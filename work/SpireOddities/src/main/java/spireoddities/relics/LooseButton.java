@@ -1,6 +1,7 @@
 package spireoddities.relics;
 
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import spireoddities.SpireOddities;
 
@@ -14,7 +15,11 @@ public class LooseButton extends SpireOdditiesRelic {
     @Override
     public void onPlayerEndTurn() {
         if (AbstractDungeon.player.hand.size() >= 5) {
-            gainBlock(4);
+            AbstractCard chosen = AbstractDungeon.player.hand.getRandomCard(AbstractDungeon.cardRandomRng);
+            if (chosen != null) {
+                chosen.retain = true;
+                trigger();
+            }
         }
     }
 

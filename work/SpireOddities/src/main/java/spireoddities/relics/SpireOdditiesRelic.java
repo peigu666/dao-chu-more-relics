@@ -9,9 +9,11 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.GainGoldAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.ObtainPotionAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -90,6 +92,20 @@ public abstract class SpireOdditiesRelic extends CustomRelic {
         trigger();
         AbstractDungeon.actionManager.addToBottom(
                 new ObtainPotionAction(AbstractDungeon.returnRandomPotion()));
+    }
+
+    protected void addCardToHand(AbstractCard card) {
+        trigger();
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(card));
+    }
+
+    protected void addRandomColorlessCardToHand(int cost, boolean exhaust) {
+        AbstractCard card = AbstractDungeon.returnTrulyRandomColorlessCardInCombat();
+        if (card != null) {
+            card.setCostForTurn(cost);
+            card.exhaust = exhaust;
+            addCardToHand(card);
+        }
     }
 
     @Override

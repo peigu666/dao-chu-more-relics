@@ -3,14 +3,14 @@
     "NAME": "Tight Knot",
     "FLAVOR": "A little tension keeps everything together.",
     "DESCRIPTIONS": [
-      "Every 3rd card you play each turn grants you #b3 Block."
+      "The 3rd card you play each turn reduces a random card in your hand's combat cost by #b1."
     ]
   },
   "SpireOddities:CrackedWaxSeal": {
     "NAME": "Cracked Wax Seal",
     "FLAVOR": "It was meant to keep something in.",
     "DESCRIPTIONS": [
-      "The first time you Exhaust a card each turn, gain #b3 Block."
+      "The first time you Exhaust a non-Status or non-Curse card each turn, add a copy to your hand. It costs #b1 more and Exhausts."
     ]
   },
   "SpireOddities:InvertedHourglass": {
@@ -31,7 +31,7 @@
     "NAME": "Worn Bandage",
     "FLAVOR": "It tears before the wound does.",
     "DESCRIPTIONS": [
-      "The first time you become Bloodied each combat, heal #b4 HP."
+      "The first time you become Bloodied each combat, gain #b2 Strength."
     ]
   },
   "SpireOddities:EmptyFlask": {
@@ -59,7 +59,7 @@
     "NAME": "Loose Button",
     "FLAVOR": "It once held something much larger together.",
     "DESCRIPTIONS": [
-      "At the end of your turn, if you have at least #b5 cards in hand, gain #b4 Block."
+      "At the end of your turn, if you have at least #b5 cards in hand, randomly Retain one."
     ]
   },
   "SpireOddities:BentNail": {
@@ -94,7 +94,7 @@
     "NAME": "Waxed Thread",
     "FLAVOR": "Wax lets it slip through the thickest hide.",
     "DESCRIPTIONS": [
-      "Every 3rd card you manually discard gives you #b1 Energy."
+      "The first card you manually discard each turn lets you draw #b1 additional card at the start of your next turn."
     ]
   },
   "SpireOddities:RustyCompass": {
@@ -122,7 +122,7 @@
     "NAME": "Golden Thread",
     "FLAVOR": "Some things can still be stitched together.",
     "DESCRIPTIONS": [
-      "The first time you gain #b10 or more Block at once each turn, gain #b1 Energy."
+      "The first time you gain #b10 or more Block at once each turn, gain #b1 Dexterity."
     ]
   },
   "SpireOddities:ClockworkFeather": {
@@ -136,7 +136,7 @@
     "NAME": "Cinder Crown",
     "FLAVOR": "The crown is still warm.",
     "DESCRIPTIONS": [
-      "Every 3rd card you Exhaust gives you #b1 Strength."
+      "Every 3rd card you Exhaust deals #b10 damage to ALL enemies."
     ]
   },
   "SpireOddities:ArchivistSeal": {
@@ -157,14 +157,14 @@
     "NAME": "Empty Dice Cup",
     "FLAVOR": "No dice. No excuses.",
     "DESCRIPTIONS": [
-      "If you end your turn with no cards in hand, gain #b1 Energy and draw #b1 card at the start of your next turn."
+      "If you end your turn with no cards in hand, add a random Colorless card to your hand after drawing next turn. It costs #b0 and Exhausts."
     ]
   },
   "SpireOddities:OldMatchbox": {
     "NAME": "Old Matchbox",
     "FLAVOR": "A small spark is enough to light a turn.",
     "DESCRIPTIONS": [
-      "The first time you play a card costing #b2 or more each turn, gain #b3 Block."
+      "The first time you play a card costing #b2 or more each turn, add a random Colorless card to your hand. It costs #b0 and Exhausts."
     ]
   },
   "SpireOddities:SplitBuckle": {
@@ -178,14 +178,14 @@
     "NAME": "Waxed Charm",
     "FLAVOR": "Wax seals the crack, and the hesitation.",
     "DESCRIPTIONS": [
-      "The first time you manually discard a card each turn, gain #b3 Block."
+      "The first time you manually discard a card each turn, add a Shiv to your hand."
     ]
   },
   "SpireOddities:IronRing": {
     "NAME": "Iron Ring",
     "FLAVOR": "It is not pretty, but it does not let go easily.",
     "DESCRIPTIONS": [
-      "The first time you lose HP each turn, gain #b2 Block."
+      "The first time you lose HP each turn, gain #b1 Energy and put a Wound into your discard pile."
     ]
   },
   "SpireOddities:TornCoinpurse": {
@@ -213,14 +213,14 @@
     "NAME": "Cracked Lens",
     "FLAVOR": "The crack reveals what should stay hidden.",
     "DESCRIPTIONS": [
-      "The first time you draw a Status or Curse each turn, gain #b3 Block."
+      "The first Status or Curse you draw each turn costs #b0 and Exhausts."
     ]
   },
   "SpireOddities:SewnPocket": {
     "NAME": "Sewn Pocket",
     "FLAVOR": "The stitches are stuffed with things never thrown away.",
     "DESCRIPTIONS": [
-      "At the end of your turn, if your discard pile has #b5 or more cards, gain #b2 Block."
+      "At the end of your turn, if your discard pile has #b5 or more cards, put a copy of a random card from it on top of your draw pile."
     ]
   },
   "SpireOddities:BrassPin": {
@@ -262,7 +262,7 @@
     "NAME": "Mirror Shard",
     "FLAVOR": "A broken mirror still reflects.",
     "DESCRIPTIONS": [
-      "The first time you take attack damage each combat, gain #b1 Energy."
+      "The first time you take attack damage each combat, deal #b4 damage to ALL enemies."
     ]
   },
   "SpireOddities:BlackenedCoin": {
@@ -297,14 +297,14 @@
     "NAME": "Corked Vial",
     "FLAVOR": "The cork remains, but the contents are long gone.",
     "DESCRIPTIONS": [
-      "The first Potion you use each combat draws #b1 card and grants #b3 Block."
+      "The first Potion you use each combat gives you a random Potion afterward."
     ]
   },
   "SpireOddities:ThreadedNeedle": {
     "NAME": "Threaded Needle",
     "FLAVOR": "It sharpens on the third pass through the cloth.",
     "DESCRIPTIONS": [
-      "Every 3rd card you manually discard gives you #b1 Dexterity."
+      "Every 3rd card you manually discard adds a random Colorless card to your hand. It costs #b0 and Exhausts."
     ]
   },
   "SpireOddities:SootyMirror": {
@@ -325,7 +325,7 @@
     "NAME": "Brass Hourglass",
     "FLAVOR": "The sand falls as the deck folds back together.",
     "DESCRIPTIONS": [
-      "Whenever you shuffle your draw pile, gain #b2 Block."
+      "Whenever you shuffle your draw pile, draw #b1 card."
     ]
   },
   "SpireOddities:RationTin": {
@@ -346,7 +346,7 @@
     "NAME": "Polished Stone",
     "FLAVOR": "Its shine comes from being held tight countless times.",
     "DESCRIPTIONS": [
-      "The first time you gain Block each turn, draw #b1 card."
+      "The first time you gain Block each turn, add a random Colorless card to your hand. It costs #b0 and Exhausts."
     ]
   },
   "SpireOddities:EmptyBell": {
@@ -367,7 +367,7 @@
     "NAME": "Silver Thread",
     "FLAVOR": "Silver does not break; it spreads the weight.",
     "DESCRIPTIONS": [
-      "The first time you gain #b15 or more Block at once each turn, draw #b1 card."
+      "The first time you gain #b15 or more Block at once each turn, draw #b2 cards."
     ]
   },
   "SpireOddities:RoyalSeal": {
@@ -409,7 +409,7 @@
     "NAME": "Gilded Scissors",
     "FLAVOR": "Cut one card and a path opens with it.",
     "DESCRIPTIONS": [
-      "The first time you Exhaust a card each combat, gain #b1 Energy and draw #b2 cards."
+      "The first time you Exhaust a card each combat, add a random Rare Colorless card to your hand. It costs #b0 and Exhausts."
     ]
   },
   "SpireOddities:CompassRose": {

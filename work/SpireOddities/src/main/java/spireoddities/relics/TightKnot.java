@@ -2,7 +2,6 @@ package spireoddities.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -16,8 +15,6 @@ public class TightKnot extends CustomRelic {
     private static final String IMG = SpireOddities.makeRelicPath("TightKnot.png");
     private static final String OUTLINE = SpireOddities.makeRelicOutlinePath("TightKnot.png");
     private static final int CARD_THRESHOLD = 3;
-    private static final int BLOCK_AMOUNT = 3;
-
     public TightKnot() {
         super(ID, TextureLoader.getTexture(IMG), TextureLoader.getTexture(OUTLINE),
                 RelicTier.COMMON, LandingSound.CLINK);
@@ -39,11 +36,13 @@ public class TightKnot extends CustomRelic {
         this.counter++;
         if (this.counter >= CARD_THRESHOLD) {
             this.counter = 0;
-            flash();
-            AbstractDungeon.actionManager.addToBottom(
-                    new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            AbstractDungeon.actionManager.addToBottom(
-                    new GainBlockAction(AbstractDungeon.player, BLOCK_AMOUNT));
+            if (!AbstractDungeon.player.hand.isEmpty()) {
+                AbstractCard chosen = AbstractDungeon.player.hand.getRandomCard(AbstractDungeon.cardRandomRng);
+                chosen.modifyCostForCombat(-1);
+                flash();
+                AbstractDungeon.actionManager.addToBottom(
+                        new RelicAboveCreatureAction(AbstractDungeon.player, this));
+            }
         }
     }
 

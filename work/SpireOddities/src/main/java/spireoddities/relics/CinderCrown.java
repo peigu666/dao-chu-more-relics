@@ -22,7 +22,7 @@ public class CinderCrown extends SpireOdditiesRelic {
         this.counter++;
         if (this.counter >= 3) {
             this.counter = 0;
-            gainStrength(1);
+            damageAll(10);
         }
     }
 

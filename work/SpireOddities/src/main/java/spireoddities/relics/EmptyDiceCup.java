@@ -28,8 +28,7 @@ public class EmptyDiceCup extends SpireOdditiesRelic {
     public void atTurnStartPostDraw() {
         if (this.counter == 1) {
             this.counter = 0;
-            gainEnergy(1);
-            draw(1);
+            addRandomColorlessCardToHand(0, true);
         }
     }
 

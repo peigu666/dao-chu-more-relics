@@ -20,7 +20,7 @@ public class WornBandage extends SpireOdditiesRelic {
     public void onBloodied() {
         if (this.counter == 0) {
             this.counter = 1;
-            heal(4);
+            gainStrength(2);
         }
     }
 

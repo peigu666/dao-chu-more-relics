@@ -20,8 +20,7 @@ public class CorkedVial extends SpireOdditiesRelic {
     public void onUsePotion() {
         if (this.counter == 0) {
             this.counter = 1;
-            gainBlock(3);
-            draw(1);
+            obtainRandomPotion();
         }
     }
 

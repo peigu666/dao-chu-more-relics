@@ -12,7 +12,7 @@ public class BrassHourglass extends SpireOdditiesRelic {
 
     @Override
     public void onShuffle() {
-        gainBlock(2);
+        draw(1);
     }
 
     @Override

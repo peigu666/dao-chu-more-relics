@@ -1,6 +1,7 @@
 package spireoddities.relics;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import spireoddities.SpireOddities;
 
@@ -21,8 +22,12 @@ public class GildedScissors extends SpireOdditiesRelic {
     public void onExhaust(AbstractCard card) {
         if (this.counter == 0) {
             this.counter = 1;
-            gainEnergy(1);
-            draw(2);
+            AbstractCard generated = AbstractDungeon.getColorlessCardFromPool(AbstractCard.CardRarity.RARE);
+            if (generated != null) {
+                generated.setCostForTurn(0);
+                generated.exhaust = true;
+                addCardToHand(generated);
+            }
         }
     }
 

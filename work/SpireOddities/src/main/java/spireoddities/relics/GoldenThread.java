@@ -25,7 +25,7 @@ public class GoldenThread extends SpireOdditiesRelic {
     public int onPlayerGainBlock(int blockAmount) {
         if (blockAmount >= 10 && this.counter == 0) {
             this.counter = 1;
-            gainEnergy(1);
+            gainDexterity(1);
         }
         return blockAmount;
     }

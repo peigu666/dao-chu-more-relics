@@ -1,5 +1,6 @@
 package spireoddities.relics;
 
+import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import spireoddities.SpireOddities;
 
@@ -25,7 +26,7 @@ public class WaxedCharm extends SpireOdditiesRelic {
     public void onManualDiscard() {
         if (this.counter == 0) {
             this.counter = 1;
-            gainBlock(3);
+            addCardToHand(new Shiv());
         }
     }
 

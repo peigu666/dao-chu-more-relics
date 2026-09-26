@@ -25,7 +25,7 @@ public class PolishedStone extends SpireOdditiesRelic {
     public int onPlayerGainBlock(int blockAmount) {
         if (this.counter == 0 && blockAmount > 0) {
             this.counter = 1;
-            draw(1);
+            addRandomColorlessCardToHand(0, true);
         }
         return blockAmount;
     }

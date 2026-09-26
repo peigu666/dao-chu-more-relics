@@ -27,7 +27,7 @@ public class OldMatchbox extends SpireOdditiesRelic {
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (this.counter == 0 && card.costForTurn >= 2) {
             this.counter = 1;
-            gainBlock(3);
+            addRandomColorlessCardToHand(0, true);
         }
     }
 
