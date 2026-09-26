@@ -1,0 +1,163 @@
+{
+  "SpireOddities:TightKnot": {
+    "NAME": "紧绷的绳结",
+    "FLAVOR": "绷紧一点，什么都会牢靠些。",
+    "DESCRIPTIONS": [
+      "每当你在本回合打出的牌数达到 #b3 的倍数时，获得 #b3 点格挡。"
+    ]
+  },
+  "SpireOddities:CrackedWaxSeal": {
+    "NAME": "裂开的封蜡",
+    "FLAVOR": "它原本是用来封住某样东西的。",
+    "DESCRIPTIONS": [
+      "每回合第一次消耗牌时，获得 #b3 点格挡。"
+    ]
+  },
+  "SpireOddities:InvertedHourglass": {
+    "NAME": "倒置沙漏",
+    "FLAVOR": "沙子向上流动，但时间依然会耗尽。",
+    "DESCRIPTIONS": [
+      "每场战斗第一次洗牌时，获得 #b1 点能量并抽 #b2 张牌。"
+    ]
+  },
+  "SpireOddities:FineCopperChain": {
+    "NAME": "细铜链",
+    "FLAVOR": "虽然纤细，却依然牢靠。",
+    "DESCRIPTIONS": [
+      "打出技能牌后，你接下来打出的攻击牌造成的伤害增加 #b4 点。"
+    ]
+  },
+  "SpireOddities:WornBandage": {
+    "NAME": "旧绷带",
+    "FLAVOR": "伤口还没裂开，它先破了。",
+    "DESCRIPTIONS": [
+      "每场战斗第一次进入濒死状态时，回复 #b4 点生命。"
+    ]
+  },
+  "SpireOddities:EmptyFlask": {
+    "NAME": "空药瓶",
+    "FLAVOR": "现在是空的。",
+    "DESCRIPTIONS": [
+      "每当你使用药水时，获得 #b1 点力量。"
+    ]
+  },
+  "SpireOddities:AshPouch": {
+    "NAME": "灰烬袋",
+    "FLAVOR": "灰烬还留有余温。",
+    "DESCRIPTIONS": [
+      "每当你消耗状态牌或诅咒牌时，对所有敌人造成 #b6 点伤害。"
+    ]
+  },
+  "SpireOddities:PatchedLeather": {
+    "NAME": "补丁皮革",
+    "FLAVOR": "每一针都来自一次逃生。",
+    "DESCRIPTIONS": [
+      "在营火休息时，额外回复 #b4 点生命。"
+    ]
+  },
+  "SpireOddities:LooseButton": {
+    "NAME": "松脱的纽扣",
+    "FLAVOR": "它曾经把更大的东西缝在一起。",
+    "DESCRIPTIONS": [
+      "回合结束时，如果你的手牌至少有 #b5 张，获得 #b4 点格挡。"
+    ]
+  },
+  "SpireOddities:BentNail": {
+    "NAME": "弯曲的铁钉",
+    "FLAVOR": "弯了，但还没断。",
+    "DESCRIPTIONS": [
+      "打出0费攻击牌后，该牌造成的伤害增加 #b5 点。"
+    ]
+  },
+  "SpireOddities:FoldedFan": {
+    "NAME": "折扇",
+    "FLAVOR": "空气总能找到缝隙。",
+    "DESCRIPTIONS": [
+      "如果你一回合内没有打出攻击牌，在下回合开始时额外抽 #b2 张牌。"
+    ]
+  },
+  "SpireOddities:SealedLetter": {
+    "NAME": "封好的信",
+    "FLAVOR": "收信人早已不在。",
+    "DESCRIPTIONS": [
+      "每当你获得一张能力牌时，获得 #b10 金币。"
+    ]
+  },
+  "SpireOddities:CopperBell": {
+    "NAME": "铜铃",
+    "FLAVOR": "只有危险靠近时它才会响。",
+    "DESCRIPTIONS": [
+      "每场战斗第一次击杀敌人时，抽 #b2 张牌。"
+    ]
+  },
+  "SpireOddities:WaxedThread": {
+    "NAME": "涂蜡的线",
+    "FLAVOR": "蜡让它穿过最厚的皮革。",
+    "DESCRIPTIONS": [
+      "你手动弃掉的每第3张牌使你获得 #b1 点能量。"
+    ]
+  },
+  "SpireOddities:RustyCompass": {
+    "NAME": "生锈的罗盘",
+    "FLAVOR": "指针指向你刚刚走过的地方。",
+    "DESCRIPTIONS": [
+      "每当你进入事件房间时，获得 #b15 金币。"
+    ]
+  },
+  "SpireOddities:Paperweight": {
+    "NAME": "镇纸",
+    "FLAVOR": "纸张很轻，高塔可不是。",
+    "DESCRIPTIONS": [
+      "回合开始时，如果你的抽牌堆不超过 #b5 张，获得 #b1 点能量。"
+    ]
+  },
+  "SpireOddities:SpareKey": {
+    "NAME": "备用钥匙",
+    "FLAVOR": "总有一把锁能容下多一把钥匙。",
+    "DESCRIPTIONS": [
+      "每当你打开非Boss宝箱时，获得一瓶随机药水。"
+    ]
+  },
+  "SpireOddities:GoldenThread": {
+    "NAME": "金线",
+    "FLAVOR": "有些东西仍然可以缝合。",
+    "DESCRIPTIONS": [
+      "每回合第一次一次性获得至少 #b10 点格挡时，获得 #b1 点能量。"
+    ]
+  },
+  "SpireOddities:ClockworkFeather": {
+    "NAME": "发条羽",
+    "FLAVOR": "羽毛也可以上发条。",
+    "DESCRIPTIONS": [
+      "每场战斗第一次抽牌堆变空时，抽 #b2 张牌。"
+    ]
+  },
+  "SpireOddities:CinderCrown": {
+    "NAME": "灰烬王冠",
+    "FLAVOR": "王冠仍然温热。",
+    "DESCRIPTIONS": [
+      "每消耗第3张牌时，获得 #b1 点力量。"
+    ]
+  },
+  "SpireOddities:ArchivistSeal": {
+    "NAME": "典藏印章",
+    "FLAVOR": "每个秘密都值得加盖印章。",
+    "DESCRIPTIONS": [
+      "卡牌奖励额外包含 #b1 张牌。"
+    ]
+  },
+  "SpireOddities:LeadCounterweight": {
+    "NAME": "铅制砝码",
+    "FLAVOR": "沉重的东西让选择变得简单。",
+    "DESCRIPTIONS": [
+      "每场战斗开始时，获得 #b2 点力量。第一个回合开始时，失去 #b1 点能量。"
+    ]
+  },
+  "SpireOddities:EmptyDiceCup": {
+    "NAME": "空骰盅",
+    "FLAVOR": "没有骰子。也没有借口。",
+    "DESCRIPTIONS": [
+      "如果你回合结束时没有手牌，在下回合开始时获得 #b1 点能量并抽 #b1 张牌。"
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+# Generated build output and previews
+work/SpireOddities/build/
+work/SpireOddities/art-preview.png
+
+# Local tooling and IDE files
+work/tooling/
+.idea/
+.vscode/
+*.iml

@@ -1,0 +1,163 @@
+{
+  "SpireOddities:TightKnot": {
+    "NAME": "Tight Knot",
+    "FLAVOR": "A little tension keeps everything together.",
+    "DESCRIPTIONS": [
+      "Every 3rd card you play each turn grants you #b3 Block."
+    ]
+  },
+  "SpireOddities:CrackedWaxSeal": {
+    "NAME": "Cracked Wax Seal",
+    "FLAVOR": "It was meant to keep something in.",
+    "DESCRIPTIONS": [
+      "The first time you Exhaust a card each turn, gain #b3 Block."
+    ]
+  },
+  "SpireOddities:InvertedHourglass": {
+    "NAME": "Inverted Hourglass",
+    "FLAVOR": "The sand falls upward, but time still runs out.",
+    "DESCRIPTIONS": [
+      "The first time you shuffle your draw pile each combat, gain #b1 Energy and draw #b2 cards."
+    ]
+  },
+  "SpireOddities:FineCopperChain": {
+    "NAME": "Fine Copper Chain",
+    "FLAVOR": "A little thin, but it holds.",
+    "DESCRIPTIONS": [
+      "After you play a Skill, your next Attack deals #b4 additional damage."
+    ]
+  },
+  "SpireOddities:WornBandage": {
+    "NAME": "Worn Bandage",
+    "FLAVOR": "It tears before the wound does.",
+    "DESCRIPTIONS": [
+      "The first time you become Bloodied each combat, heal #b4 HP."
+    ]
+  },
+  "SpireOddities:EmptyFlask": {
+    "NAME": "Empty Flask",
+    "FLAVOR": "Empty, for now.",
+    "DESCRIPTIONS": [
+      "Whenever you use a Potion, gain #b1 Strength."
+    ]
+  },
+  "SpireOddities:AshPouch": {
+    "NAME": "Ash Pouch",
+    "FLAVOR": "The ashes are still warm.",
+    "DESCRIPTIONS": [
+      "Whenever you Exhaust a Status or Curse, deal #b6 damage to ALL enemies."
+    ]
+  },
+  "SpireOddities:PatchedLeather": {
+    "NAME": "Patched Leather",
+    "FLAVOR": "Every stitch came from an escape.",
+    "DESCRIPTIONS": [
+      "At Rest Sites, heal #b4 additional HP when you Rest."
+    ]
+  },
+  "SpireOddities:LooseButton": {
+    "NAME": "Loose Button",
+    "FLAVOR": "It once held something much larger together.",
+    "DESCRIPTIONS": [
+      "At the end of your turn, if you have at least #b5 cards in hand, gain #b4 Block."
+    ]
+  },
+  "SpireOddities:BentNail": {
+    "NAME": "Bent Nail",
+    "FLAVOR": "Bent, but not broken.",
+    "DESCRIPTIONS": [
+      "After you play a 0-cost Attack, it deals #b5 additional damage."
+    ]
+  },
+  "SpireOddities:FoldedFan": {
+    "NAME": "Folded Fan",
+    "FLAVOR": "Air always finds a gap.",
+    "DESCRIPTIONS": [
+      "If you play no Attacks during a turn, draw #b2 additional cards at the start of your next turn."
+    ]
+  },
+  "SpireOddities:SealedLetter": {
+    "NAME": "Sealed Letter",
+    "FLAVOR": "The recipient is long gone.",
+    "DESCRIPTIONS": [
+      "Whenever you obtain a Power, gain #b10 Gold."
+    ]
+  },
+  "SpireOddities:CopperBell": {
+    "NAME": "Copper Bell",
+    "FLAVOR": "It rings only when danger draws near.",
+    "DESCRIPTIONS": [
+      "The first time you kill an enemy each combat, draw #b2 cards."
+    ]
+  },
+  "SpireOddities:WaxedThread": {
+    "NAME": "Waxed Thread",
+    "FLAVOR": "Wax lets it slip through the thickest hide.",
+    "DESCRIPTIONS": [
+      "Every 3rd card you manually discard gives you #b1 Energy."
+    ]
+  },
+  "SpireOddities:RustyCompass": {
+    "NAME": "Rusty Compass",
+    "FLAVOR": "The needle points where you just were.",
+    "DESCRIPTIONS": [
+      "Whenever you enter an Event room, gain #b15 Gold."
+    ]
+  },
+  "SpireOddities:Paperweight": {
+    "NAME": "Paperweight",
+    "FLAVOR": "The paper is light. The Spire is not.",
+    "DESCRIPTIONS": [
+      "At the start of your turn, if your draw pile has #b5 or fewer cards, gain #b1 Energy."
+    ]
+  },
+  "SpireOddities:SpareKey": {
+    "NAME": "Spare Key",
+    "FLAVOR": "There is always a lock for one more key.",
+    "DESCRIPTIONS": [
+      "Whenever you open a non-Boss Chest, obtain a random Potion."
+    ]
+  },
+  "SpireOddities:GoldenThread": {
+    "NAME": "Golden Thread",
+    "FLAVOR": "Some things can still be stitched together.",
+    "DESCRIPTIONS": [
+      "The first time you gain #b10 or more Block at once each turn, gain #b1 Energy."
+    ]
+  },
+  "SpireOddities:ClockworkFeather": {
+    "NAME": "Clockwork Feather",
+    "FLAVOR": "Even a feather can be wound.",
+    "DESCRIPTIONS": [
+      "The first time your draw pile becomes empty each combat, draw #b2 cards."
+    ]
+  },
+  "SpireOddities:CinderCrown": {
+    "NAME": "Cinder Crown",
+    "FLAVOR": "The crown is still warm.",
+    "DESCRIPTIONS": [
+      "Every 3rd card you Exhaust gives you #b1 Strength."
+    ]
+  },
+  "SpireOddities:ArchivistSeal": {
+    "NAME": "Archivist's Seal",
+    "FLAVOR": "Every secret deserves a seal.",
+    "DESCRIPTIONS": [
+      "Card Rewards contain #b1 additional card."
+    ]
+  },
+  "SpireOddities:LeadCounterweight": {
+    "NAME": "Lead Counterweight",
+    "FLAVOR": "Heavy things make simple decisions.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, gain #b2 Strength. At the start of your first turn, lose #b1 Energy."
+    ]
+  },
+  "SpireOddities:EmptyDiceCup": {
+    "NAME": "Empty Dice Cup",
+    "FLAVOR": "No dice. No excuses.",
+    "DESCRIPTIONS": [
+      "If you end your turn with no cards in hand, gain #b1 Energy and draw #b1 card at the start of your next turn."
+    ]
+  }
+}
