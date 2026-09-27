@@ -1,5 +1,6 @@
 package spireoddities.relics;
 
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import spireoddities.SpireOddities;
 
@@ -22,12 +23,12 @@ public class GoldenThread extends SpireOdditiesRelic {
     }
 
     @Override
-    public int onPlayerGainBlock(int blockAmount) {
+    public int onPlayerGainedBlock(float blockAmount) {
         if (blockAmount >= 10 && this.counter == 0) {
             this.counter = 1;
             gainDexterity(1);
         }
-        return blockAmount;
+        return MathUtils.floor(blockAmount);
     }
 
     @Override

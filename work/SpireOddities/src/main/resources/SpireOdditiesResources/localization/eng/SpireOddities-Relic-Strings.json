@@ -3,7 +3,7 @@
     "NAME": "Tight Knot",
     "FLAVOR": "A little tension keeps everything together.",
     "DESCRIPTIONS": [
-      "The 3rd card you play each turn reduces a random card in your hand's combat cost by #b1."
+      "Every 3 cards you play each turn reduces a random card in your hand's combat cost by #b1."
     ]
   },
   "SpireOddities:CrackedWaxSeal": {
@@ -136,7 +136,7 @@
     "NAME": "Cinder Crown",
     "FLAVOR": "The crown is still warm.",
     "DESCRIPTIONS": [
-      "Every 3rd card you Exhaust deals #b10 damage to ALL enemies."
+      "Every 3 cards you Exhaust deals #b10 damage to ALL enemies."
     ]
   },
   "SpireOddities:ArchivistSeal": {
@@ -304,7 +304,7 @@
     "NAME": "Threaded Needle",
     "FLAVOR": "It sharpens on the third pass through the cloth.",
     "DESCRIPTIONS": [
-      "Every 3rd card you manually discard adds a random Colorless card to your hand. It costs #b0 and Exhausts."
+      "Every 3 cards you manually discard adds a random Colorless card to your hand. It costs #b0 and Exhausts."
     ]
   },
   "SpireOddities:SootyMirror": {
