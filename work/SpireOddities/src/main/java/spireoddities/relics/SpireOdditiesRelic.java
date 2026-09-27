@@ -1,6 +1,7 @@
 package spireoddities.relics;
 
 import basemod.abstracts.CustomRelic;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -15,6 +16,7 @@ import com.megacrit.cardcrawl.actions.common.ObtainPotionAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -56,6 +58,27 @@ public abstract class SpireOdditiesRelic extends CustomRelic {
             default:
                 break;
         }
+    }
+
+    private boolean isOffScreen() {
+        float margin = 128.0F * Settings.scale;
+        return currentY < -margin || currentY > Settings.HEIGHT + margin;
+    }
+
+    @Override
+    public void render(SpriteBatch sb, boolean inTopPanel, Color outlineColor) {
+        if (!inTopPanel && isOffScreen()) {
+            return;
+        }
+        super.render(sb, inTopPanel, outlineColor);
+    }
+
+    @Override
+    public void renderLock(SpriteBatch sb, Color color) {
+        if (isOffScreen()) {
+            return;
+        }
+        super.renderLock(sb, color);
     }
 
     protected void trigger() {

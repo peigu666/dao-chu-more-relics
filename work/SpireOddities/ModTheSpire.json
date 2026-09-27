@@ -4,7 +4,7 @@
   "author_list": ["沛孤"],
   "credits": "ModTheSpire, BaseMod",
   "description": "One hundred and sixty-three original relics with varied and playful mechanics for Slay the Spire.",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "sts_version": "12-18-2022",
   "mts_version": "3.30.0",
   "dependencies": ["basemod"],
