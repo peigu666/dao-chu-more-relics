@@ -439,5 +439,705 @@
     "DESCRIPTIONS": [
       "如果你回合结束时没有能量，在下回合开始时抽 #b2 张牌。"
     ]
+  },
+  "SpireOddities:Knucklebone": {
+    "NAME": "骨节骰",
+    "FLAVOR": "它总会滚到最需要的那一面。",
+    "DESCRIPTIONS": [
+      "每回合第一次打出 0 费牌时，获得 #b4 点格挡。"
+    ]
+  },
+  "SpireOddities:EmberPin": {
+    "NAME": "余烬别针",
+    "FLAVOR": "先点火，再挥刀。",
+    "DESCRIPTIONS": [
+      "每回合先打出技能牌再打出攻击牌时，获得 #b1 点能量。"
+    ]
+  },
+  "SpireOddities:PaperCrown": {
+    "NAME": "纸冠",
+    "FLAVOR": "空无一物也可以像王冠一样轻。",
+    "DESCRIPTIONS": [
+      "如果回合结束时手牌为空，下回合额外抽 #b2 张牌。"
+    ]
+  },
+  "SpireOddities:MothWing": {
+    "NAME": "蛾翼",
+    "FLAVOR": "它偏爱纸张上最糟糕的字句。",
+    "DESCRIPTIONS": [
+      "每回合第一次抽到状态牌或诅咒牌时，使其保留并获得 #b3 点格挡。"
+    ]
+  },
+  "SpireOddities:PatiencePebble": {
+    "NAME": "耐心石",
+    "FLAVOR": "握得越久，越有分量。",
+    "DESCRIPTIONS": [
+      "回合结束时，每剩余 #b1 点能量获得 #b2 点格挡。"
+    ]
+  },
+  "SpireOddities:BrokenRuler": {
+    "NAME": "断尺",
+    "FLAVOR": "它量不准，却知道什么最重。",
+    "DESCRIPTIONS": [
+      "每回合第一次打出费用至少为 #b2 的牌时，获得等同其费用的格挡。"
+    ]
+  },
+  "SpireOddities:Inkblot": {
+    "NAME": "墨渍",
+    "FLAVOR": "有些空白只有烧掉后才会出现。",
+    "DESCRIPTIONS": [
+      "每回合第一次消耗技能牌时，抽 #b1 张牌。"
+    ]
+  },
+  "SpireOddities:LooseGear": {
+    "NAME": "松动齿轮",
+    "FLAVOR": "它不再咬合，却仍然会转。",
+    "DESCRIPTIONS": [
+      "每场战斗第一次洗牌时，将一张随机无色牌置于弃牌堆；费用为 #b0 且会被消耗。"
+    ]
+  },
+  "SpireOddities:Matchbook": {
+    "NAME": "火柴簿",
+    "FLAVOR": "火星总在最不合适的时候出现。",
+    "DESCRIPTIONS": [
+      "每回合第一次格挡被打破时，对所有敌人造成 #b5 点伤害。"
+    ]
+  },
+  "SpireOddities:RibbonLoop": {
+    "NAME": "缎带环",
+    "FLAVOR": "它把留下来的东西系得更紧。",
+    "DESCRIPTIONS": [
+      "回合结束时，如果手牌中有保留牌，获得 #b2 点格挡。"
+    ]
+  },
+  "SpireOddities:DriedApple": {
+    "NAME": "干苹果",
+    "FLAVOR": "甜味会留在伤口之后。",
+    "DESCRIPTIONS": [
+      "每场战斗第一次被治疗时，获得 #b1 点敏捷。"
+    ]
+  },
+  "SpireOddities:TangleHook": {
+    "NAME": "纠缠钩",
+    "FLAVOR": "它总能把旧东西钩回来。",
+    "DESCRIPTIONS": [
+      "每回合第一次手动弃牌后，将弃牌堆一张随机牌置于抽牌堆顶。"
+    ]
+  },
+  "SpireOddities:CandleStub": {
+    "NAME": "残烛",
+    "FLAVOR": "短暂的火光也能挡住一击。",
+    "DESCRIPTIONS": [
+      "每回合第一次失去生命时，获得 #b3 点格挡。"
+    ]
+  },
+  "SpireOddities:TinCrown": {
+    "NAME": "锡冠",
+    "FLAVOR": "空想也需要一点防护。",
+    "DESCRIPTIONS": [
+      "每回合第一次打出能力牌时，获得 #b4 点格挡。"
+    ]
+  },
+  "SpireOddities:HollowMarble": {
+    "NAME": "空心弹珠",
+    "FLAVOR": "里面回响着不存在的声音。",
+    "DESCRIPTIONS": [
+      "每场战斗第一次激发充能球时，抽 #b1 张牌。"
+    ]
+  },
+  "SpireOddities:QuietBell": {
+    "NAME": "静铃",
+    "FLAVOR": "听不见的声音也会提醒你。",
+    "DESCRIPTIONS": [
+      "回合开始抽牌后，如果手牌少于 #b3 张，抽 #b1 张牌。"
+    ]
+  },
+  "SpireOddities:ThreadSpool": {
+    "NAME": "线轴",
+    "FLAVOR": "每次重来，都能缝得更稳。",
+    "DESCRIPTIONS": [
+      "每场战斗第一次洗牌时，获得 #b2 点敏捷。"
+    ]
+  },
+  "SpireOddities:SootMark": {
+    "NAME": "煤印",
+    "FLAVOR": "手上沾灰，心里就有火。",
+    "DESCRIPTIONS": [
+      "每回合第一次手动弃牌后，获得 #b1 点力量。"
+    ]
+  },
+  "SpireOddities:CopperLatch": {
+    "NAME": "铜搭扣",
+    "FLAVOR": "它只在你松懈时扣紧。",
+    "DESCRIPTIONS": [
+      "每回合结束时，如果本回合没有获得格挡，获得 #b1 点力量。"
+    ]
+  },
+  "SpireOddities:WindupKey": {
+    "NAME": "发条钥匙",
+    "FLAVOR": "开场前的最后一圈。",
+    "DESCRIPTIONS": [
+      "战斗开始时，将一张随机无色牌置于抽牌堆顶；费用为 #b1 且会被消耗。"
+    ]
+  },
+  "SpireOddities:SeedPouch": {
+    "NAME": "种袋",
+    "FLAVOR": "有些种子必须先埋下。",
+    "DESCRIPTIONS": [
+      "战斗开始时，将一张随机无色牌置于弃牌堆；费用为 #b1 且会被消耗。"
+    ]
+  },
+  "SpireOddities:MuddyBoots": {
+    "NAME": "泥靴",
+    "FLAVOR": "走得越远，靴子越沉。",
+    "DESCRIPTIONS": [
+      "精英战斗开始时，获得 #b2 层镀层护甲。"
+    ]
+  },
+  "SpireOddities:StainedMap": {
+    "NAME": "污渍地图",
+    "FLAVOR": "最脏的标记往往指向最有趣的地方。",
+    "DESCRIPTIONS": [
+      "进入事件房时，获得 #b8 金币。"
+    ]
+  },
+  "SpireOddities:WickCandle": {
+    "NAME": "烛芯",
+    "FLAVOR": "它燃烧得很慢，却从不熄灭。",
+    "DESCRIPTIONS": [
+      "回合开始时，如果生命不高于上限的一半，获得 #b1 点能量并失去 #b1 点生命。"
+    ]
+  },
+  "SpireOddities:CopperScale": {
+    "NAME": "铜鳞",
+    "FLAVOR": "一片鳞也足够改变落点。",
+    "DESCRIPTIONS": [
+      "每回合第一次受到攻击伤害时，获得 #b6 点格挡。"
+    ]
+  },
+  "SpireOddities:IronAcorn": {
+    "NAME": "铁橡果",
+    "FLAVOR": "它在破碎之后才露出核心。",
+    "DESCRIPTIONS": [
+      "每场战斗第一次格挡被打破时，获得 #b1 层神器。"
+    ]
+  },
+  "SpireOddities:ThornButton": {
+    "NAME": "荆棘纽扣",
+    "FLAVOR": "扣子里面藏着一根小刺。",
+    "DESCRIPTIONS": [
+      "每回合第一次受到攻击伤害时，对所有敌人造成 #b2 点伤害。"
+    ]
+  },
+  "SpireOddities:AshenRibbon": {
+    "NAME": "灰烬缎带",
+    "FLAVOR": "它先替你记下一笔代价。",
+    "DESCRIPTIONS": [
+      "战斗开始时，将一张灼伤放入弃牌堆；每场战斗第一次消耗牌时，获得 #b1 点能量。"
+    ]
+  },
+  "SpireOddities:PocketWhistle": {
+    "NAME": "口袋哨",
+    "FLAVOR": "第二声才是真正的信号。",
+    "DESCRIPTIONS": [
+      "每场战斗击杀第二个敌人时，抽 #b2 张牌。"
+    ]
+  },
+  "SpireOddities:CardboardMask": {
+    "NAME": "纸板面具",
+    "FLAVOR": "它不会消除麻烦，只会变出别的东西。",
+    "DESCRIPTIONS": [
+      "每场战斗第一次抽到状态牌或诅咒牌时，将一张随机无色牌加入手牌；费用为 #b0 且会被消耗。"
+    ]
+  },
+  "SpireOddities:TornBookmark": {
+    "NAME": "撕裂书签",
+    "FLAVOR": "读过的东西总有一天会回来。",
+    "DESCRIPTIONS": [
+      "回合开始抽牌后，如果弃牌堆至少有 #b5 张牌，将一张随机弃牌加入手牌。"
+    ]
+  },
+  "SpireOddities:FadedDice": {
+    "NAME": "褪色骰子",
+    "FLAVOR": "它把确定的数字也变得可疑。",
+    "DESCRIPTIONS": [
+      "每场战斗第一次打出能力牌时，随机化手牌费用。"
+    ]
+  },
+  "SpireOddities:SpareSpring": {
+    "NAME": "备用弹簧",
+    "FLAVOR": "被压下去之后，它会在下一刻弹回。",
+    "DESCRIPTIONS": [
+      "受到伤害后，下回合额外抽 #b1 张牌。"
+    ]
+  },
+  "SpireOddities:FullSaltStone": {
+    "NAME": "满盐石",
+    "FLAVOR": "完整时坚硬，裂开后反而能止痛。",
+    "DESCRIPTIONS": [
+      "战斗开始时，满血获得 #b1 点力量，否则回复 #b3 点生命。"
+    ]
+  },
+  "SpireOddities:DullNeedle": {
+    "NAME": "钝针",
+    "FLAVOR": "扎得不深，却总会留下痕迹。",
+    "DESCRIPTIONS": [
+      "每回合第一次打出 0 费牌时，获得 #b1 点能量并将一张眩晕放入弃牌堆。"
+    ]
+  },
+  "SpireOddities:PocketChalk": {
+    "NAME": "口袋粉笔",
+    "FLAVOR": "先画一条线，再沿线走。",
+    "DESCRIPTIONS": [
+      "每回合打出攻击牌后，你下一张技能牌费用降低 #b1。"
+    ]
+  },
+  "SpireOddities:GreasedKey": {
+    "NAME": "油润钥匙",
+    "FLAVOR": "开锁总要付出一点滑稽的代价。",
+    "DESCRIPTIONS": [
+      "打开非 Boss 宝箱时，支付 #b5 金币并获得一瓶随机药水。"
+    ]
+  },
+  "SpireOddities:MasonChip": {
+    "NAME": "石匠碎片",
+    "FLAVOR": "敲碎瓶塞，也敲碎一点沉默。",
+    "DESCRIPTIONS": [
+      "每场战斗第一次使用药水时，将一张随机无色牌置于弃牌堆；费用为 #b0 且会被消耗。"
+    ]
+  },
+  "SpireOddities:QuietCoin": {
+    "NAME": "静默硬币",
+    "FLAVOR": "花出去的声音会在下一回合回来。",
+    "DESCRIPTIONS": [
+      "花费金币后，下回合开始抽 #b1 张牌。"
+    ]
+  },
+  "SpireOddities:BrittleCrown": {
+    "NAME": "脆冠",
+    "FLAVOR": "它让你更快，也更容易碎。",
+    "DESCRIPTIONS": [
+      "战斗开始时，获得 #b1 点能量并获得 #b1 层易伤。"
+    ]
+  },
+  "SpireOddities:SevenKnotCord": {
+    "NAME": "七结绳",
+    "FLAVOR": "三种结法，才能解开一个结。",
+    "DESCRIPTIONS": [
+      "每回合打出攻击、技能、能力各至少一次时，获得 #b1 点能量。"
+    ]
+  },
+  "SpireOddities:ResonantFork": {
+    "NAME": "共鸣音叉",
+    "FLAVOR": "第四声会叫醒牌堆。",
+    "DESCRIPTIONS": [
+      "每打出 #b4 张牌，尝试打出抽牌堆顶牌。"
+    ]
+  },
+  "SpireOddities:FalseBottom": {
+    "NAME": "假底",
+    "FLAVOR": "箱子底下还有一层。",
+    "DESCRIPTIONS": [
+      "每场战斗第一次洗牌时，获得 #b1 点能量并将一张随机无色牌置于抽牌堆顶；费用为 #b0 且会被消耗。"
+    ]
+  },
+  "SpireOddities:CinderCompass": {
+    "NAME": "灰烬罗盘",
+    "FLAVOR": "它指向所有正在衰弱的东西。",
+    "DESCRIPTIONS": [
+      "每回合第一次消耗牌时，使所有敌人获得 #b1 层虚弱。"
+    ]
+  },
+  "SpireOddities:CrownOfThorns": {
+    "NAME": "荆棘冠",
+    "FLAVOR": "疼痛会把王冠顶得更高。",
+    "DESCRIPTIONS": [
+      "每回合第一次失去生命时，获得 #b1 点力量。"
+    ]
+  },
+  "SpireOddities:BlueHourglass": {
+    "NAME": "蓝沙漏",
+    "FLAVOR": "每一粒沙都带着一点重量。",
+    "DESCRIPTIONS": [
+      "每回合第一次洗牌时，获得 #b1 点能量并将一张伤口放入弃牌堆。"
+    ]
+  },
+  "SpireOddities:SplitCoin": {
+    "NAME": "分裂硬币",
+    "FLAVOR": "正反两面都不肯让步。",
+    "DESCRIPTIONS": [
+      "每次花费金币时，随机获得 #b1 点能量或 #b4 点格挡。"
+    ]
+  },
+  "SpireOddities:MirrorDice": {
+    "NAME": "镜骰",
+    "FLAVOR": "它掷出的不是数字，而是可能性。",
+    "DESCRIPTIONS": [
+      "每场战斗第一次攻击时，伤害随机增加 #b8 或减少 #b4。"
+    ]
+  },
+  "SpireOddities:PaintedMask": {
+    "NAME": "彩面具",
+    "FLAVOR": "戴上它之后，下一步总显得轻松。",
+    "DESCRIPTIONS": [
+      "每场战斗第一次使用药水后，你下一张牌费用变为 #b0。"
+    ]
+  },
+  "SpireOddities:SaltCrown": {
+    "NAME": "盐冠",
+    "FLAVOR": "盐能保存东西，也会刺痛伤口。",
+    "DESCRIPTIONS": [
+      "每场战斗第一次受到攻击伤害时，获得 #b1 层神器并获得 #b1 层易伤。"
+    ]
+  },
+  "SpireOddities:TuningFork": {
+    "NAME": "调音叉",
+    "FLAVOR": "不出声的回合也有自己的节拍。",
+    "DESCRIPTIONS": [
+      "如果回合结束时没有打出攻击牌，将一张随机无色牌加入手牌；费用为 #b0 且会被消耗。"
+    ]
+  },
+  "SpireOddities:ThreadedCompass": {
+    "NAME": "穿线罗盘",
+    "FLAVOR": "它把过去缝到未来。",
+    "DESCRIPTIONS": [
+      "每次洗牌后，将弃牌堆一张随机牌置于抽牌堆顶。"
+    ]
+  },
+  "SpireOddities:BlackRibbon": {
+    "NAME": "黑缎带",
+    "FLAVOR": "第二次割断时，结才会松开。",
+    "DESCRIPTIONS": [
+      "每回合手动弃掉第 #b2 张牌时，对所有敌人造成 #b7 点伤害。"
+    ]
+  },
+  "SpireOddities:GlassOrchard": {
+    "NAME": "玻璃果园",
+    "FLAVOR": "完整时透明，破损时锋利。",
+    "DESCRIPTIONS": [
+      "战斗开始时，满血获得 #b8 点格挡，否则获得 #b1 点敏捷。"
+    ]
+  },
+  "SpireOddities:BuriedKey": {
+    "NAME": "埋藏钥匙",
+    "FLAVOR": "真正的锁总在最难走的路上。",
+    "DESCRIPTIONS": [
+      "精英战斗中第一次击杀敌人时，获得 #b1 点能量。"
+    ]
+  },
+  "SpireOddities:RedLedger": {
+    "NAME": "红账本",
+    "FLAVOR": "收入会在下一次挥霍时留下痕迹。",
+    "DESCRIPTIONS": [
+      "每当获得金币，你下一次攻击伤害增加 #b6。"
+    ]
+  },
+  "SpireOddities:SootCage": {
+    "NAME": "煤灰笼",
+    "FLAVOR": "它把一张牌和一点火星一起留下。",
+    "DESCRIPTIONS": [
+      "回合结束时如果有格挡，随机保留一张手牌并获得 #b2 点格挡。"
+    ]
+  },
+  "SpireOddities:AlchemistCork": {
+    "NAME": "炼金软木",
+    "FLAVOR": "瓶子空了，反应才刚开始。",
+    "DESCRIPTIONS": [
+      "每场战斗第一次使用药水时，将一张随机无色牌置于抽牌堆顶；费用为 #b0 且会被消耗。"
+    ]
+  },
+  "SpireOddities:LuckySplinter": {
+    "NAME": "幸运木屑",
+    "FLAVOR": "断裂的地方最容易夹住一张牌。",
+    "DESCRIPTIONS": [
+      "卡牌奖励额外出现 #b1 张牌。"
+    ]
+  },
+  "SpireOddities:UnderstudySeal": {
+    "NAME": "替身印",
+    "FLAVOR": "它不接受未经排练的结局。",
+    "DESCRIPTIONS": [
+      "获得未升级的稀有牌时，将其升级。"
+    ]
+  },
+  "SpireOddities:HauntedBookmark": {
+    "NAME": "闹鬼书签",
+    "FLAVOR": "读到最后一页时，总有人在身后。",
+    "DESCRIPTIONS": [
+      "回合开始抽牌后，如果手牌至少有 #b8 张，获得 #b1 点能量并失去 #b1 点生命。"
+    ]
+  },
+  "SpireOddities:StolenHour": {
+    "NAME": "偷来的时刻",
+    "FLAVOR": "多出来的时间总会索要利息。",
+    "DESCRIPTIONS": [
+      "战斗开始时额外抽 #b2 张牌，并将 #b2 张眩晕放入弃牌堆。"
+    ]
+  },
+  "SpireOddities:CrackedBellows": {
+    "NAME": "裂风箱",
+    "FLAVOR": "它只有在用力时才会发声。",
+    "DESCRIPTIONS": [
+      "每回合第一次获得至少 #b8 点格挡时，获得 #b1 点力量。"
+    ]
+  },
+  "SpireOddities:FalseCrown": {
+    "NAME": "伪冠",
+    "FLAVOR": "它只能闪耀一次。",
+    "DESCRIPTIONS": [
+      "每场战斗第一次攻击造成的伤害翻倍。"
+    ]
+  },
+  "SpireOddities:ThornyDice": {
+    "NAME": "荆棘骰",
+    "FLAVOR": "最好的结果是没人受伤。",
+    "DESCRIPTIONS": [
+      "每场战斗第一次受到攻击伤害时，将其降为 #b0，并对所有敌人造成 #b3 点伤害。"
+    ]
+  },
+  "SpireOddities:DampenedBell": {
+    "NAME": "闷铃",
+    "FLAVOR": "战斗结束后，它才肯响。",
+    "DESCRIPTIONS": [
+      "战斗胜利时，回复 #b3 点生命。"
+    ]
+  },
+  "SpireOddities:BorrowedQuill": {
+    "NAME": "借来的羽笔",
+    "FLAVOR": "写下的东西会要求第二份。",
+    "DESCRIPTIONS": [
+      "每场战斗第一次消耗牌时，将该牌的复制品置于抽牌堆顶。"
+    ]
+  },
+  "SpireOddities:ClockworkNest": {
+    "NAME": "发条巢",
+    "FLAVOR": "两只齿轮才能孵出一枚火花。",
+    "DESCRIPTIONS": [
+      "每击杀 #b2 个敌人，获得 #b1 点能量并抽 #b1 张牌。"
+    ]
+  },
+  "SpireOddities:PocketTelescope": {
+    "NAME": "口袋望远镜",
+    "FLAVOR": "先看清下一步，再决定要不要走。",
+    "DESCRIPTIONS": [
+      "战斗开始时，抽牌堆顶牌费用变为 #b0。"
+    ]
+  },
+  "SpireOddities:SlottedStone": {
+    "NAME": "开槽石",
+    "FLAVOR": "它为罕见的东西留了一道缝。",
+    "DESCRIPTIONS": [
+      "卡牌奖励中稀有牌出现的概率提高 #b3%。"
+    ]
+  },
+  "SpireOddities:FatesThread": {
+    "NAME": "命运之线",
+    "FLAVOR": "诅咒也能被拉出一个结。",
+    "DESCRIPTIONS": [
+      "每场战斗第一次抽到诅咒时，获得 #b1 点能量和 #b2 点格挡。"
+    ]
+  },
+  "SpireOddities:VacantScabbard": {
+    "NAME": "空鞘",
+    "FLAVOR": "第一击若够快，回声会留到最后。",
+    "DESCRIPTIONS": [
+      "每回合第一张牌若为攻击牌，回合结束时抽 #b1 张牌。"
+    ]
+  },
+  "SpireOddities:TallyStone": {
+    "NAME": "计数石",
+    "FLAVOR": "第三道刻痕最深。",
+    "DESCRIPTIONS": [
+      "每打出 #b3 张牌，获得 #b5 点格挡。"
+    ]
+  },
+  "SpireOddities:StitchedMask": {
+    "NAME": "缝合面具",
+    "FLAVOR": "不同的表情，缝在同一张脸上。",
+    "DESCRIPTIONS": [
+      "手动弃牌后，你的下一张攻击牌伤害增加 #b3，技能牌费用降低 #b1，或能力牌抽 #b1 张牌。"
+    ]
+  },
+  "SpireOddities:CoalLantern": {
+    "NAME": "煤灯",
+    "FLAVOR": "烟雾会让每条路都显得更窄。",
+    "DESCRIPTIONS": [
+      "每次洗牌时，使所有敌人获得 #b1 层虚弱。"
+    ]
+  },
+  "SpireOddities:OuroborosLoop": {
+    "NAME": "衔尾环",
+    "FLAVOR": "开头总会在结尾回来。",
+    "DESCRIPTIONS": [
+      "每场战斗第一次洗牌时，将本场第一张打出的牌的复制品加入手牌。"
+    ]
+  },
+  "SpireOddities:RedString": {
+    "NAME": "红线",
+    "FLAVOR": "它只承认正确的顺序。",
+    "DESCRIPTIONS": [
+      "每回合按攻击、技能、能力的顺序各打出一次时，获得 #b2 点能量并抽 #b2 张牌。"
+    ]
+  },
+  "SpireOddities:EmptyCrown": {
+    "NAME": "空冠",
+    "FLAVOR": "空出来的位置也能带来重量。",
+    "DESCRIPTIONS": [
+      "如果回合结束时能量为 #b0，下回合额外抽 #b3 张牌。"
+    ]
+  },
+  "SpireOddities:UnstablePrism": {
+    "NAME": "不稳棱镜",
+    "FLAVOR": "它把光线折成一件暂时的武器。",
+    "DESCRIPTIONS": [
+      "战斗开始时，将一张随机无色牌加入手牌；费用为 #b0 且会被消耗。"
+    ]
+  },
+  "SpireOddities:GlassGuillotine": {
+    "NAME": "玻璃断头台",
+    "FLAVOR": "它只在最危险的高度落下。",
+    "DESCRIPTIONS": [
+      "每场战斗第一次生命降至一半或更低时，获得 #b1 层无实体并将 #b2 张伤口放入弃牌堆。"
+    ]
+  },
+  "SpireOddities:BlackTide": {
+    "NAME": "黑潮",
+    "FLAVOR": "潮水带来力量，也带来残骸。",
+    "DESCRIPTIONS": [
+      "战斗开始时，获得 #b2 点力量并将 #b2 张伤口放入弃牌堆。"
+    ]
+  },
+  "SpireOddities:ChoirOfNails": {
+    "NAME": "钉之合唱",
+    "FLAVOR": "第六声之后，所有人都会听见。",
+    "DESCRIPTIONS": [
+      "每打出 #b6 张牌，对所有敌人造成 #b4 点伤害并施加 #b1 层易伤。"
+    ]
+  },
+  "SpireOddities:LastMatch": {
+    "NAME": "最后一根火柴",
+    "FLAVOR": "最后一次点燃时，光会更亮。",
+    "DESCRIPTIONS": [
+      "每场战斗第一次洗牌时，获得 #b2 点能量并抽 #b3 张牌。"
+    ]
+  },
+  "SpireOddities:MismatchedCompass": {
+    "NAME": "错位罗盘",
+    "FLAVOR": "它总会指向四个答案中的一个。",
+    "DESCRIPTIONS": [
+      "战斗开始时，随机获得 #b2 点力量、#b2 点敏捷、#b8 点格挡或 #b1 点能量。"
+    ]
+  },
+  "SpireOddities:CrownOfDetours": {
+    "NAME": "绕路王冠",
+    "FLAVOR": "最危险的路上藏着额外的时间。",
+    "DESCRIPTIONS": [
+      "精英战斗开始时，获得 #b1 点能量并抽 #b2 张牌。"
+    ]
+  },
+  "SpireOddities:PaperMoon": {
+    "NAME": "纸月",
+    "FLAVOR": "一张牌也能照亮整回合。",
+    "DESCRIPTIONS": [
+      "回合结束时如果手牌恰好有 #b1 张，保留它；下回合将它的复制品加入手牌。"
+    ]
+  },
+  "SpireOddities:HollowContract": {
+    "NAME": "空白契约",
+    "FLAVOR": "签字处总会留下一个空洞。",
+    "DESCRIPTIONS": [
+      "每场战斗第一次失去生命时，获得 #b2 点能量并将一张遗憾放入弃牌堆。"
+    ]
+  },
+  "SpireOddities:EngineOfMaybe": {
+    "NAME": "也许引擎",
+    "FLAVOR": "它从不保证下一次会发生什么。",
+    "DESCRIPTIONS": [
+      "每 #b3 回合开始时，随机获得 #b1 点力量、#b1 点敏捷、#b1 点能量或抽 #b2 张牌。"
+    ]
+  },
+  "SpireOddities:TideClock": {
+    "NAME": "潮汐钟",
+    "FLAVOR": "潮水退去时，会带走一张旧牌。",
+    "DESCRIPTIONS": [
+      "每次洗牌时，将弃牌堆一张随机牌的复制品加入手牌。"
+    ]
+  },
+  "SpireOddities:PermanentMarker": {
+    "NAME": "永久墨笔",
+    "FLAVOR": "第一笔总会留下最深的痕迹。",
+    "DESCRIPTIONS": [
+      "每回合第一次抽牌时，使其保留且本回合费用降低 #b1。"
+    ]
+  },
+  "SpireOddities:ReverseBell": {
+    "NAME": "逆响铃",
+    "FLAVOR": "丢掉三样东西，铃声才会回来。",
+    "DESCRIPTIONS": [
+      "回合结束时，如果本回合手动弃掉至少 #b3 张牌，获得 #b1 点能量并抽 #b2 张牌。"
+    ]
+  },
+  "SpireOddities:SpiderBargain": {
+    "NAME": "蜘蛛交易",
+    "FLAVOR": "它先给你两根线，再等你踩进去。",
+    "DESCRIPTIONS": [
+      "战斗开始时，获得 #b2 点能量并将 #b2 张伤口放入弃牌堆。"
+    ]
+  },
+  "SpireOddities:AtlasOfErrors": {
+    "NAME": "错误图鉴",
+    "FLAVOR": "每个错误都值得再读一遍。",
+    "DESCRIPTIONS": [
+      "每次消耗牌时，将一张随机牌的复制品置于抽牌堆顶。"
+    ]
+  },
+  "SpireOddities:PrismCage": {
+    "NAME": "棱镜笼",
+    "FLAVOR": "把思绪打乱，光才会逃出来。",
+    "DESCRIPTIONS": [
+      "每回合第一次打出能力牌时，获得 #b1 点能量并随机化手牌费用。"
+    ]
+  },
+  "SpireOddities:FatesReceipt": {
+    "NAME": "命运收据",
+    "FLAVOR": "没有使用的东西也会被记账。",
+    "DESCRIPTIONS": [
+      "战斗胜利时，如果本场没有使用药水，获得 #b25 金币。"
+    ]
+  },
+  "SpireOddities:CrimsonNeedle": {
+    "NAME": "绯红针",
+    "FLAVOR": "它把生命缝成更硬的线。",
+    "DESCRIPTIONS": [
+      "每场战斗第一次被治疗时，获得 #b1 点力量并获得相当于治疗量一半的格挡。"
+    ]
+  },
+  "SpireOddities:StormChime": {
+    "NAME": "风暴铃",
+    "FLAVOR": "第五声之后，空气会裂开。",
+    "DESCRIPTIONS": [
+      "每打出 #b5 张牌，对所有敌人造成 #b12 点伤害并抽 #b1 张牌。"
+    ]
+  },
+  "SpireOddities:FracturedCrown": {
+    "NAME": "碎冠",
+    "FLAVOR": "改变姿态时，裂缝会短暂合拢。",
+    "DESCRIPTIONS": [
+      "每场战斗第一次切换姿态时，获得 #b6 点格挡并抽 #b2 张牌。"
+    ]
+  },
+  "SpireOddities:QuietStorm": {
+    "NAME": "静默风暴",
+    "FLAVOR": "最安静的回合也会积蓄雷声。",
+    "DESCRIPTIONS": [
+      "如果回合结束时没有打出牌，获得 #b1 点能量并抽 #b1 张牌。"
+    ]
+  },
+  "SpireOddities:LibraryOfAsh": {
+    "NAME": "灰烬图书馆",
+    "FLAVOR": "烧毁的章节仍然可以重写。",
+    "DESCRIPTIONS": [
+      "每场战斗第一次洗牌时，升级一张随机手牌并抽 #b1 张牌。"
+    ]
   }
 }
