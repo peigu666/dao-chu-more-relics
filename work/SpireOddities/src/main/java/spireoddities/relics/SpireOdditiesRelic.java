@@ -2,6 +2,7 @@ package spireoddities.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
@@ -30,6 +31,31 @@ public abstract class SpireOdditiesRelic extends CustomRelic {
                 TextureLoader.getTexture(SpireOddities.makeRelicOutlinePath(fileName)),
                 tier,
                 sound);
+    }
+
+    @Override
+    public void renderCounter(SpriteBatch sb, boolean inTopPanel) {
+        switch (relicId) {
+            // These counters represent player-readable progress, not internal flags.
+            case "SpireOddities:CagedSpark":
+            case "SpireOddities:CinderCrown":
+            case "SpireOddities:HollowQuill":
+            case "SpireOddities:ThreadedNeedle":
+            case "SpireOddities:TightKnot":
+            case "SpireOddities:PocketWhistle":
+            case "SpireOddities:ResonantFork":
+            case "SpireOddities:BlackRibbon":
+            case "SpireOddities:ClockworkNest":
+            case "SpireOddities:TallyStone":
+            case "SpireOddities:ChoirOfNails":
+            case "SpireOddities:EngineOfMaybe":
+            case "SpireOddities:ReverseBell":
+            case "SpireOddities:StormChime":
+                super.renderCounter(sb, inTopPanel);
+                break;
+            default:
+                break;
+        }
     }
 
     protected void trigger() {
