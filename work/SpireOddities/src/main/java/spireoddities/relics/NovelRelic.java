@@ -135,6 +135,17 @@ public class NovelRelic extends SpireOdditiesRelic {
         trigger();
     }
 
+    private void addRetainedRandomColorlessCardToHand() {
+        AbstractCard card = AbstractDungeon.returnTrulyRandomColorlessCardInCombat();
+        if (card == null) {
+            return;
+        }
+        card.setCostForTurn(0);
+        card.exhaust = true;
+        card.retain = true;
+        addCardToHand(card);
+    }
+
     private void copyToHand(AbstractCard card) {
         if (card == null) {
             return;
@@ -462,7 +473,7 @@ public class NovelRelic extends SpireOdditiesRelic {
                 break;
             case TUNING_FORK:
                 if (this.counter == 0) {
-                    addRandomColorlessCardToHand(0, true);
+                    addRetainedRandomColorlessCardToHand();
                 }
                 break;
             case SOOT_CAGE:
@@ -516,6 +527,11 @@ public class NovelRelic extends SpireOdditiesRelic {
                 if (this.counter == 0 && card.costForTurn == 0) {
                     this.counter = 1;
                     gainBlock(4);
+                }
+                break;
+            case TUNING_FORK:
+                if (card.type == AbstractCard.CardType.ATTACK) {
+                    this.counter = 1;
                 }
                 break;
             case EMBER_PIN:
@@ -677,7 +693,7 @@ public class NovelRelic extends SpireOdditiesRelic {
                         && (card.type == AbstractCard.CardType.STATUS
                         || card.type == AbstractCard.CardType.CURSE)) {
                     this.counter = 1;
-                    addRandomColorlessCardToHand(0, true);
+                    gainPlayerPower(new ArtifactPower(AbstractDungeon.player, 1));
                 }
                 break;
             case FATES_THREAD:
@@ -1008,7 +1024,10 @@ public class NovelRelic extends SpireOdditiesRelic {
             case MASON_CHIP:
                 if (this.counter == 0) {
                     this.counter = 1;
-                    addRandomColorlessToDiscard(0, true);
+                    int block = Math.min(8, AbstractDungeon.player.exhaustPile.size() * 2);
+                    if (block > 0) {
+                        gainBlock(block);
+                    }
                 }
                 break;
             case PAINTED_MASK:

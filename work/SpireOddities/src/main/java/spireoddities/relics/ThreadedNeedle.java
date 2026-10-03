@@ -1,5 +1,7 @@
 package spireoddities.relics;
 
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import spireoddities.SpireOddities;
 
@@ -21,7 +23,13 @@ public class ThreadedNeedle extends SpireOdditiesRelic {
         this.counter++;
         if (this.counter >= 3) {
             this.counter = 0;
-            addRandomColorlessCardToHand(0, true);
+            AbstractCard card = AbstractDungeon.player.hand.getUpgradableCards()
+                    .getRandomCard(AbstractDungeon.cardRandomRng);
+            if (card != null) {
+                card.upgrade();
+                card.flash();
+                trigger();
+            }
         }
     }
 

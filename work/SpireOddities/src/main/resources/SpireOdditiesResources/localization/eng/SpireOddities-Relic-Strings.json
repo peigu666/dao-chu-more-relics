@@ -73,7 +73,7 @@
     "NAME": "Folded Fan",
     "FLAVOR": "Air always finds a gap.",
     "DESCRIPTIONS": [
-      "If you play no Attacks during a turn, draw #b2 additional cards at the start of your next turn."
+      "If you play no Attacks during your turn, apply #b1 Weak to ALL enemies at the end of your turn."
     ]
   },
   "SpireOddities:SealedLetter": {
@@ -164,7 +164,7 @@
     "NAME": "Old Matchbox",
     "FLAVOR": "A small spark is enough to light a turn.",
     "DESCRIPTIONS": [
-      "The first time you play a card costing #b2 or more each turn, add a random Colorless card to your hand. It costs #b0 and Exhausts."
+      "The first time you play a card costing #b2 or more each turn, gain #b1 Energy and shuffle a Dazed into your discard pile."
     ]
   },
   "SpireOddities:SplitBuckle": {
@@ -304,7 +304,7 @@
     "NAME": "Threaded Needle",
     "FLAVOR": "It sharpens on the third pass through the cloth.",
     "DESCRIPTIONS": [
-      "Every 3 cards you manually discard adds a random Colorless card to your hand. It costs #b0 and Exhausts."
+      "Every 3 cards you manually discard, Upgrade a random Upgradeable card in your hand for this combat."
     ]
   },
   "SpireOddities:SootyMirror": {
@@ -346,7 +346,7 @@
     "NAME": "Polished Stone",
     "FLAVOR": "Its shine comes from being held tight countless times.",
     "DESCRIPTIONS": [
-      "The first time you gain Block each turn, add a random Colorless card to your hand. It costs #b0 and Exhausts."
+      "The first time you gain Block each combat, gain #b3 Thorns."
     ]
   },
   "SpireOddities:EmptyBell": {
@@ -647,7 +647,7 @@
     "NAME": "Cardboard Mask",
     "FLAVOR": "It does not remove trouble; it changes its shape.",
     "DESCRIPTIONS": [
-      "The first Status or Curse you draw each combat adds a random Colorless card to your hand. It costs #b0 and Exhausts."
+      "The first time you draw a Status or Curse each combat, gain #b1 Artifact."
     ]
   },
   "SpireOddities:TornBookmark": {
@@ -703,7 +703,7 @@
     "NAME": "Mason Chip",
     "FLAVOR": "Break the cork, and break the silence.",
     "DESCRIPTIONS": [
-      "The first Potion you use each combat puts a random Colorless card into your discard pile. It costs #b0 and Exhausts."
+      "The first Potion you use each combat grants #b2 Block for each card in your exhaust pile, up to #b8 Block."
     ]
   },
   "SpireOddities:QuietCoin": {
@@ -794,7 +794,7 @@
     "NAME": "Tuning Fork",
     "FLAVOR": "A silent turn still has a rhythm.",
     "DESCRIPTIONS": [
-      "If you play no Attacks during your turn, add a random Colorless card to your hand at the end of it. It costs #b0 and Exhausts."
+      "If you play no Attacks during your turn, add a random Colorless card to your hand at the end of it. It costs #b0, is Retained, and Exhausts."
     ]
   },
   "SpireOddities:ThreadedCompass": {
