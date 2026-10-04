@@ -387,7 +387,6 @@ public class NovelRelic extends SpireOdditiesRelic {
             case EMBER_PIN:
             case MOTH_WING:
             case BROKEN_RULER:
-            case TIN_CROWN:
             case SOOT_MARK:
             case COPPER_LATCH:
             case COPPER_SCALE:
@@ -421,8 +420,6 @@ public class NovelRelic extends SpireOdditiesRelic {
                     gainEnergy(1);
                     loseHp(1);
                 }
-                break;
-            case SPARE_SPRING:
                 break;
             case PAPER_MOON:
                 if (this.counter == 1 && this.storedCard != null) {
@@ -468,12 +465,6 @@ public class NovelRelic extends SpireOdditiesRelic {
                 if (AbstractDungeon.player.discardPile.size() >= 5) {
                     trigger();
                     addToBot(new RandomCardFromDiscardPileToHandAction());
-                }
-                break;
-            case SPARE_SPRING:
-                if (this.counter == 1) {
-                    draw(1);
-                    this.counter = 0;
                 }
                 break;
             case QUIET_COIN:
@@ -619,9 +610,9 @@ public class NovelRelic extends SpireOdditiesRelic {
                 }
                 break;
             case TIN_CROWN:
-                if (this.counter == 0 && card.type == AbstractCard.CardType.POWER) {
-                    this.counter = 1;
-                    gainBlock(4);
+                if (this.counter < 3 && card.type == AbstractCard.CardType.POWER) {
+                    this.counter++;
+                    heal(2);
                 }
                 break;
             case CANDLE_STUB:
@@ -1071,6 +1062,7 @@ public class NovelRelic extends SpireOdditiesRelic {
             case SPARE_SPRING:
                 if (this.counter == 0) {
                     this.counter = 1;
+                    heal(3);
                 }
                 break;
             case HOLLOW_CONTRACT:

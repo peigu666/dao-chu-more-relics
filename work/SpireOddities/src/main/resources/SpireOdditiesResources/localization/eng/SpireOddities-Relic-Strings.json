@@ -535,7 +535,7 @@
     "NAME": "Tin Crown",
     "FLAVOR": "Even daydreams need a little protection.",
     "DESCRIPTIONS": [
-      "The first Power you play each turn grants #b4 Block."
+      "Your first three Powers each combat heal #b2 HP."
     ]
   },
   "SpireOddities:HollowMarble": {
@@ -668,7 +668,7 @@
     "NAME": "Spare Spring",
     "FLAVOR": "Pressed down, it snaps back later.",
     "DESCRIPTIONS": [
-      "After you take damage, draw #b1 extra card next turn."
+      "The first time you lose HP each combat, heal #b3 HP."
     ]
   },
   "SpireOddities:FullSaltStone": {

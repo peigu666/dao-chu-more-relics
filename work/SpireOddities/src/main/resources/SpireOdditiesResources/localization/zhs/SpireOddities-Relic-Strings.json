@@ -535,7 +535,7 @@
     "NAME": "锡冠",
     "FLAVOR": "空想也需要一点防护。",
     "DESCRIPTIONS": [
-      "每回合第一次打出能力牌时，获得 #b4 点格挡。"
+      "每场战斗打出的前三张能力牌各使你回复 #b2 点生命。"
     ]
   },
   "SpireOddities:HollowMarble": {
@@ -668,7 +668,7 @@
     "NAME": "备用弹簧",
     "FLAVOR": "被压下去之后，它会在下一刻弹回。",
     "DESCRIPTIONS": [
-      "受到伤害后，下回合额外抽 #b1 张牌。"
+      "每场战斗第一次失去生命时，回复 #b3 点生命。"
     ]
   },
   "SpireOddities:FullSaltStone": {
