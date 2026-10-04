@@ -39,7 +39,6 @@ public abstract class SpireOdditiesRelic extends CustomRelic {
     public void renderCounter(SpriteBatch sb, boolean inTopPanel) {
         switch (relicId) {
             // These counters represent player-readable progress, not internal flags.
-            case "SpireOddities:CagedSpark":
             case "SpireOddities:CinderCrown":
             case "SpireOddities:HollowQuill":
             case "SpireOddities:ThreadedNeedle":
@@ -49,7 +48,7 @@ public abstract class SpireOdditiesRelic extends CustomRelic {
             case "SpireOddities:BlackRibbon":
             case "SpireOddities:ClockworkNest":
             case "SpireOddities:TallyStone":
-            case "SpireOddities:ChoirOfNails":
+            case "SpireOddities:SlottedStone":
             case "SpireOddities:EngineOfMaybe":
             case "SpireOddities:ReverseBell":
             case "SpireOddities:StormChime":

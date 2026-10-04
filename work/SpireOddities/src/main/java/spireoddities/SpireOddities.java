@@ -36,7 +36,12 @@ public class SpireOddities implements EditRelicsSubscriber, EditStringsSubscribe
     }
 
     private static void addNovel(String id, AbstractRelic.RelicTier tier, NovelRelic.Mode mode) {
-        BaseMod.addRelic(new NovelRelic(id, tier, mode), RelicType.SHARED);
+        addNovel(id, tier, mode, RelicType.SHARED);
+    }
+
+    private static void addNovel(String id, AbstractRelic.RelicTier tier, NovelRelic.Mode mode,
+                                 RelicType pool) {
+        BaseMod.addRelic(new NovelRelic(id, tier, mode), pool);
     }
 
     @Override
@@ -74,7 +79,7 @@ public class SpireOddities implements EditRelicsSubscriber, EditStringsSubscribe
         BaseMod.addRelic(new EmptyDiceCup(), RelicType.SHARED);
         BaseMod.addRelic(new OldMatchbox(), RelicType.SHARED);
         BaseMod.addRelic(new SplitBuckle(), RelicType.SHARED);
-        BaseMod.addRelic(new WaxedCharm(), RelicType.SHARED);
+        BaseMod.addRelic(new WaxedCharm(), RelicType.GREEN);
         BaseMod.addRelic(new IronRing(), RelicType.SHARED);
         BaseMod.addRelic(new TornCoinpurse(), RelicType.SHARED);
         BaseMod.addRelic(new AshenNeedle(), RelicType.SHARED);
@@ -105,8 +110,8 @@ public class SpireOddities implements EditRelicsSubscriber, EditStringsSubscribe
         BaseMod.addRelic(new RoyalSeal(), RelicType.SHARED);
         BaseMod.addRelic(new BloodLedger(), RelicType.SHARED);
         BaseMod.addRelic(new CagedSpark(), RelicType.SHARED);
-        BaseMod.addRelic(new StanceTalisman(), RelicType.SHARED);
-        BaseMod.addRelic(new OrbEmblem(), RelicType.SHARED);
+        BaseMod.addRelic(new StanceTalisman(), RelicType.PURPLE);
+        BaseMod.addRelic(new OrbEmblem(), RelicType.BLUE);
         BaseMod.addRelic(new GildedScissors(), RelicType.SHARED);
         BaseMod.addRelic(new CompassRose(), RelicType.SHARED);
         BaseMod.addRelic(new DawnLantern(), RelicType.SHARED);
@@ -127,7 +132,8 @@ public class SpireOddities implements EditRelicsSubscriber, EditStringsSubscribe
         addNovel("TangleHook", AbstractRelic.RelicTier.COMMON, NovelRelic.Mode.TANGLE_HOOK);
         addNovel("CandleStub", AbstractRelic.RelicTier.COMMON, NovelRelic.Mode.CANDLE_STUB);
         addNovel("TinCrown", AbstractRelic.RelicTier.COMMON, NovelRelic.Mode.TIN_CROWN);
-        addNovel("HollowMarble", AbstractRelic.RelicTier.COMMON, NovelRelic.Mode.HOLLOW_MARBLE);
+        addNovel("HollowMarble", AbstractRelic.RelicTier.COMMON,
+                NovelRelic.Mode.HOLLOW_MARBLE, RelicType.BLUE);
         addNovel("QuietBell", AbstractRelic.RelicTier.COMMON, NovelRelic.Mode.QUIET_BELL);
         addNovel("ThreadSpool", AbstractRelic.RelicTier.COMMON, NovelRelic.Mode.THREAD_SPOOL);
         addNovel("SootMark", AbstractRelic.RelicTier.COMMON, NovelRelic.Mode.SOOT_MARK);
@@ -195,7 +201,7 @@ public class SpireOddities implements EditRelicsSubscriber, EditStringsSubscribe
         addNovel("EmptyCrown", AbstractRelic.RelicTier.RARE, NovelRelic.Mode.EMPTY_CROWN);
         addNovel("UnstablePrism", AbstractRelic.RelicTier.RARE, NovelRelic.Mode.UNSTABLE_PRISM);
         addNovel("GlassGuillotine", AbstractRelic.RelicTier.RARE, NovelRelic.Mode.GLASS_GUILLOTINE);
-        addNovel("BlackTide", AbstractRelic.RelicTier.RARE, NovelRelic.Mode.BLACK_TIDE);
+        addNovel("BlackTide", AbstractRelic.RelicTier.BOSS, NovelRelic.Mode.BLACK_TIDE);
         addNovel("ChoirOfNails", AbstractRelic.RelicTier.RARE, NovelRelic.Mode.CHOIR_OF_NAILS);
         addNovel("LastMatch", AbstractRelic.RelicTier.RARE, NovelRelic.Mode.LAST_MATCH);
         addNovel("MismatchedCompass", AbstractRelic.RelicTier.RARE, NovelRelic.Mode.MISMATCHED_COMPASS);
@@ -212,7 +218,8 @@ public class SpireOddities implements EditRelicsSubscriber, EditStringsSubscribe
         addNovel("FatesReceipt", AbstractRelic.RelicTier.RARE, NovelRelic.Mode.FATES_RECEIPT);
         addNovel("CrimsonNeedle", AbstractRelic.RelicTier.RARE, NovelRelic.Mode.CRIMSON_NEEDLE);
         addNovel("StormChime", AbstractRelic.RelicTier.RARE, NovelRelic.Mode.STORM_CHIME);
-        addNovel("FracturedCrown", AbstractRelic.RelicTier.RARE, NovelRelic.Mode.FRACTURED_CROWN);
+        addNovel("FracturedCrown", AbstractRelic.RelicTier.RARE,
+                NovelRelic.Mode.FRACTURED_CROWN, RelicType.PURPLE);
         addNovel("QuietStorm", AbstractRelic.RelicTier.RARE, NovelRelic.Mode.QUIET_STORM);
         addNovel("LibraryOfAsh", AbstractRelic.RelicTier.RARE, NovelRelic.Mode.LIBRARY_OF_ASH);
     }

@@ -1,8 +1,8 @@
 package spireoddities.relics;
 
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.rooms.EventRoom;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
@@ -19,19 +19,7 @@ public class FoldedFan extends SpireOdditiesRelic {
 
     @Override
     public void atBattleStart() {
-        this.counter = 0;
-    }
-
-    @Override
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.type == AbstractCard.CardType.ATTACK) {
-            this.counter = 1;
-        }
-    }
-
-    @Override
-    public void onPlayerEndTurn() {
-        if (this.counter == 0) {
+        if (this.counter == 1) {
             trigger();
             for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
                 if (monster != null && !monster.isDeadOrEscaped()) {
@@ -42,6 +30,13 @@ public class FoldedFan extends SpireOdditiesRelic {
             }
         }
         this.counter = 0;
+    }
+
+    @Override
+    public void onEnterRoom(AbstractRoom room) {
+        if (room instanceof EventRoom) {
+            this.counter = 1;
+        }
     }
 
     @Override

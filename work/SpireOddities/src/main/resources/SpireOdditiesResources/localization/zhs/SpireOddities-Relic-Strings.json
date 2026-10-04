@@ -73,7 +73,7 @@
     "NAME": "折扇",
     "FLAVOR": "空气总能找到缝隙。",
     "DESCRIPTIONS": [
-      "如果你一回合内没有打出攻击牌，回合结束时使所有敌人获得 #b1 层虚弱。"
+      "进入事件房后，在下一场战斗开始时使所有敌人获得 #b1 层虚弱。"
     ]
   },
   "SpireOddities:SealedLetter": {
@@ -136,7 +136,7 @@
     "NAME": "灰烬王冠",
     "FLAVOR": "王冠仍然温热。",
     "DESCRIPTIONS": [
-      "每消耗 #b3 张牌，对所有敌人造成 #b10 点伤害。"
+      "每消耗 #b3 张牌，使生命值最高的敌人获得 #b1 层虚弱。"
     ]
   },
   "SpireOddities:ArchivistSeal": {
@@ -358,9 +358,9 @@
   },
   "SpireOddities:MirrorShield": {
     "NAME": "镜盾",
-    "FLAVOR": "它映出敌人的动作，却无法替你承受全部。",
+    "FLAVOR": "它映照的不只是力量。",
     "DESCRIPTIONS": [
-      "每回合第一次格挡被打破时，对所有敌人造成 #b6 点伤害。"
+      "每场战斗第一次带有虚弱或易伤的敌人死亡时，将其身上各至多 #b2 层此类减益施加给其他敌人。"
     ]
   },
   "SpireOddities:SilverThread": {
@@ -386,9 +386,9 @@
   },
   "SpireOddities:CagedSpark": {
     "NAME": "笼中火花",
-    "FLAVOR": "它数着铁笼的缝隙，等第五次闪烁。",
+    "FLAVOR": "每一道电光都要付出代价。",
     "DESCRIPTIONS": [
-      "每打出 5 张牌时，获得 #b1 点能量并抽 #b1 张牌。"
+      "每场战斗第一次打出至少花费 #b2 点能量并将能量耗尽的牌时，获得 #b1 层神器。"
     ]
   },
   "SpireOddities:StanceTalisman": {
@@ -598,7 +598,7 @@
     "NAME": "污渍地图",
     "FLAVOR": "最脏的标记往往指向最有趣的地方。",
     "DESCRIPTIONS": [
-      "进入事件房时，获得 #b8 金币。"
+      "进入事件房后，在下一场胜利后回复 #b4 点生命。"
     ]
   },
   "SpireOddities:WickCandle": {
@@ -696,7 +696,7 @@
     "NAME": "油润钥匙",
     "FLAVOR": "开锁总要付出一点滑稽的代价。",
     "DESCRIPTIONS": [
-      "打开非 Boss 宝箱时，支付 #b5 金币并获得一瓶随机药水。"
+      "打开非 Boss 宝箱时，若有可升级的牌且至少有 #b5 金币，支付 #b5 金币并随机升级牌组中的一张可升级牌。"
     ]
   },
   "SpireOddities:MasonChip": {
@@ -792,9 +792,9 @@
   },
   "SpireOddities:TuningFork": {
     "NAME": "调音叉",
-    "FLAVOR": "不出声的回合也有自己的节拍。",
+    "FLAVOR": "一个音升高时，另一个便会落下。",
     "DESCRIPTIONS": [
-      "如果回合结束时没有打出攻击牌，将一张随机无色牌加入手牌；费用为 #b0、保留且会被消耗。"
+      "每回合开始抽牌后，若手牌最左与最右的非 X 费用牌费用不同，交换它们的费用。"
     ]
   },
   "SpireOddities:ThreadedCompass": {
@@ -850,7 +850,7 @@
     "NAME": "幸运木屑",
     "FLAVOR": "断裂的地方最容易夹住一张牌。",
     "DESCRIPTIONS": [
-      "卡牌奖励额外出现 #b1 张牌。"
+      "你加入牌组的下一张普通技能牌会被升级。"
     ]
   },
   "SpireOddities:UnderstudySeal": {
@@ -925,16 +925,16 @@
   },
   "SpireOddities:SlottedStone": {
     "NAME": "开槽石",
-    "FLAVOR": "它为罕见的东西留了一道缝。",
+    "FLAVOR": "它总能为选择留下空隙。",
     "DESCRIPTIONS": [
-      "卡牌奖励中稀有牌出现的概率提高 #b3%。"
+      "每跳过 #b2 次卡牌奖励，随机升级牌组中的一张可升级牌。"
     ]
   },
   "SpireOddities:FatesThread": {
     "NAME": "命运之线",
     "FLAVOR": "诅咒也能被拉出一个结。",
     "DESCRIPTIONS": [
-      "每场战斗第一次抽到诅咒时，获得 #b1 点能量和 #b2 点格挡。"
+      "每场战斗第一次抽到诅咒时，将其保留。若它在回合结束时仍在手牌中，消耗它并获得 #b1 层神器。"
     ]
   },
   "SpireOddities:VacantScabbard": {
@@ -983,7 +983,7 @@
     "NAME": "空冠",
     "FLAVOR": "空出来的位置也能带来重量。",
     "DESCRIPTIONS": [
-      "如果回合结束时能量为 #b0，下回合额外抽 #b3 张牌。"
+      "回合结束时若能量为 #b0，对当前生命值最低的敌人施加 #b1 层易伤。"
     ]
   },
   "SpireOddities:UnstablePrism": {
@@ -1009,16 +1009,16 @@
   },
   "SpireOddities:ChoirOfNails": {
     "NAME": "钉之合唱",
-    "FLAVOR": "第六声之后，所有人都会听见。",
+    "FLAVOR": "它只会让最危险的声音低下来。",
     "DESCRIPTIONS": [
-      "每打出 #b6 张牌，对所有敌人造成 #b4 点伤害并施加 #b1 层易伤。"
+      "每回合开始抽牌后，使意图伤害最高的攻击敌人获得 #b1 层虚弱。"
     ]
   },
   "SpireOddities:LastMatch": {
     "NAME": "最后一根火柴",
     "FLAVOR": "最后一次点燃时，光会更亮。",
     "DESCRIPTIONS": [
-      "每场战斗第一次洗牌时，获得 #b2 点能量并抽 #b3 张牌。"
+      "每场战斗第一次抽到灼伤时，对所有敌人施加 #b1 层易伤。"
     ]
   },
   "SpireOddities:MismatchedCompass": {
@@ -1123,7 +1123,7 @@
     "NAME": "碎冠",
     "FLAVOR": "改变姿态时，裂缝会短暂合拢。",
     "DESCRIPTIONS": [
-      "每场战斗第一次切换姿态时，获得 #b6 点格挡并抽 #b2 张牌。"
+      "每场战斗第一次离开愤怒姿态时，对所有敌人造成 #b8 点伤害。"
     ]
   },
   "SpireOddities:QuietStorm": {

@@ -73,7 +73,7 @@
     "NAME": "Folded Fan",
     "FLAVOR": "Air always finds a gap.",
     "DESCRIPTIONS": [
-      "If you play no Attacks during your turn, apply #b1 Weak to ALL enemies at the end of your turn."
+      "After you enter an Event Room, apply #b1 Weak to ALL enemies at the start of your next combat."
     ]
   },
   "SpireOddities:SealedLetter": {
@@ -136,7 +136,7 @@
     "NAME": "Cinder Crown",
     "FLAVOR": "The crown is still warm.",
     "DESCRIPTIONS": [
-      "Every 3 cards you Exhaust deals #b10 damage to ALL enemies."
+      "Every 3 cards you Exhaust, apply #b1 Weak to the enemy with the most HP."
     ]
   },
   "SpireOddities:ArchivistSeal": {
@@ -358,9 +358,9 @@
   },
   "SpireOddities:MirrorShield": {
     "NAME": "Mirror Shield",
-    "FLAVOR": "It reflects an enemy's motion, not all of its force.",
+    "FLAVOR": "It reflects more than force.",
     "DESCRIPTIONS": [
-      "The first time your Block is broken each turn, deal #b6 damage to ALL enemies."
+      "The first time each combat an enemy with Weak or Vulnerable dies, apply up to #b2 stacks of each of its debuffs to the other enemies."
     ]
   },
   "SpireOddities:SilverThread": {
@@ -386,9 +386,9 @@
   },
   "SpireOddities:CagedSpark": {
     "NAME": "Caged Spark",
-    "FLAVOR": "It counts the bars and waits for the fifth flicker.",
+    "FLAVOR": "Each spark asks for a price.",
     "DESCRIPTIONS": [
-      "Every 5 cards you play in a turn, gain #b1 Energy and draw #b1 card."
+      "The first time each combat you play a card that costs at least #b2 Energy and empties your Energy, gain #b1 Artifact."
     ]
   },
   "SpireOddities:StanceTalisman": {
@@ -598,7 +598,7 @@
     "NAME": "Stained Map",
     "FLAVOR": "The dirtiest mark often points to the best place.",
     "DESCRIPTIONS": [
-      "When you enter an Event Room, gain #b8 Gold."
+      "After you enter an Event Room, heal #b4 HP after your next victory."
     ]
   },
   "SpireOddities:WickCandle": {
@@ -696,7 +696,7 @@
     "NAME": "Greased Key",
     "FLAVOR": "Opening a lock costs a little comedy.",
     "DESCRIPTIONS": [
-      "When you open a non-Boss Chest, pay #b5 Gold to obtain a random Potion."
+      "When you open a non-Boss Chest, if you have at least #b5 Gold and an upgradeable card, pay #b5 Gold to upgrade a random upgradeable card in your deck."
     ]
   },
   "SpireOddities:MasonChip": {
@@ -792,9 +792,9 @@
   },
   "SpireOddities:TuningFork": {
     "NAME": "Tuning Fork",
-    "FLAVOR": "A silent turn still has a rhythm.",
+    "FLAVOR": "When one note rises, another falls.",
     "DESCRIPTIONS": [
-      "If you play no Attacks during your turn, add a random Colorless card to your hand at the end of it. It costs #b0, is Retained, and Exhausts."
+      "After your opening draw each turn, if the leftmost and rightmost playable non-X cards in your hand have different costs, swap their costs."
     ]
   },
   "SpireOddities:ThreadedCompass": {
@@ -850,7 +850,7 @@
     "NAME": "Lucky Splinter",
     "FLAVOR": "A broken place is easiest to wedge a card into.",
     "DESCRIPTIONS": [
-      "Card Rewards contain #b1 additional card."
+      "The next Common Skill card you add to your deck is Upgraded."
     ]
   },
   "SpireOddities:UnderstudySeal": {
@@ -925,16 +925,16 @@
   },
   "SpireOddities:SlottedStone": {
     "NAME": "Slotted Stone",
-    "FLAVOR": "It leaves a gap for rare things.",
+    "FLAVOR": "It always leaves room for a choice.",
     "DESCRIPTIONS": [
-      "The chance for a Rare card to appear in Card Rewards is increased by #b3%."
+      "For every #b2 Card Rewards you skip, upgrade a random upgradeable card in your deck."
     ]
   },
   "SpireOddities:FatesThread": {
     "NAME": "Fate's Thread",
     "FLAVOR": "Even a Curse can be pulled into a knot.",
     "DESCRIPTIONS": [
-      "The first Curse you draw each combat grants #b1 Energy and #b2 Block."
+      "The first Curse you draw each combat is Retained. If it is still in your hand at end of turn, Exhaust it and gain #b1 Artifact."
     ]
   },
   "SpireOddities:VacantScabbard": {
@@ -983,7 +983,7 @@
     "NAME": "Empty Crown",
     "FLAVOR": "An empty place can still carry weight.",
     "DESCRIPTIONS": [
-      "If you end your turn with #b0 Energy, draw #b3 extra cards next turn."
+      "At end of turn, if you have #b0 Energy, apply #b1 Vulnerable to the enemy with the least HP."
     ]
   },
   "SpireOddities:UnstablePrism": {
@@ -1009,16 +1009,16 @@
   },
   "SpireOddities:ChoirOfNails": {
     "NAME": "Choir of Nails",
-    "FLAVOR": "After the sixth voice, everyone hears it.",
+    "FLAVOR": "It quiets the most dangerous voice.",
     "DESCRIPTIONS": [
-      "Every #b6 cards you play, deal #b4 damage to all enemies and apply #b1 Vulnerable."
+      "After your opening draw each turn, apply #b1 Weak to the attacking enemy with the highest displayed damage."
     ]
   },
   "SpireOddities:LastMatch": {
     "NAME": "Last Match",
     "FLAVOR": "The final flame burns brightest.",
     "DESCRIPTIONS": [
-      "The first time you shuffle each combat, gain #b2 Energy and draw #b3 cards."
+      "The first time you draw a Burn each combat, apply #b1 Vulnerable to ALL enemies."
     ]
   },
   "SpireOddities:MismatchedCompass": {
@@ -1123,7 +1123,7 @@
     "NAME": "Fractured Crown",
     "FLAVOR": "A stance change briefly seals the cracks.",
     "DESCRIPTIONS": [
-      "The first time you change Stance each combat, gain #b6 Block and draw #b2 cards."
+      "The first time you leave Wrath each combat, deal #b8 damage to ALL enemies."
     ]
   },
   "SpireOddities:QuietStorm": {

@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
@@ -36,7 +37,10 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.EventRoom;
 import com.megacrit.cardcrawl.rooms.MonsterRoomElite;
 import com.megacrit.cardcrawl.stances.AbstractStance;
+import com.megacrit.cardcrawl.stances.WrathStance;
 import spireoddities.SpireOddities;
+
+import java.util.ArrayList;
 
 /**
  * The v0.6.0 relic set uses one small dispatcher so every relic still has its
@@ -75,6 +79,7 @@ public class NovelRelic extends SpireOdditiesRelic {
     private final Mode mode;
     private AbstractCard firstCard;
     private AbstractCard storedCard;
+    private boolean stainedMapMarked;
 
     public NovelRelic(String idSuffix, RelicTier relicTier, Mode mode) {
         super(SpireOddities.makeID(idSuffix), idSuffix + ".png", relicTier,
@@ -86,7 +91,7 @@ public class NovelRelic extends SpireOdditiesRelic {
     }
 
     private static LandingSound soundFor(RelicTier tier) {
-        if (tier == RelicTier.RARE) {
+        if (tier == RelicTier.RARE || tier == RelicTier.BOSS) {
             return LandingSound.MAGICAL;
         }
         if (tier == RelicTier.UNCOMMON) {
@@ -135,17 +140,6 @@ public class NovelRelic extends SpireOdditiesRelic {
         trigger();
     }
 
-    private void addRetainedRandomColorlessCardToHand() {
-        AbstractCard card = AbstractDungeon.returnTrulyRandomColorlessCardInCombat();
-        if (card == null) {
-            return;
-        }
-        card.setCostForTurn(0);
-        card.exhaust = true;
-        card.retain = true;
-        addCardToHand(card);
-    }
-
     private void copyToHand(AbstractCard card) {
         if (card == null) {
             return;
@@ -184,6 +178,57 @@ public class NovelRelic extends SpireOdditiesRelic {
         }
         trigger();
         addToBot(new RandomizeHandCostAction());
+    }
+
+    private void retuneHandCosts() {
+        AbstractCard first = null;
+        AbstractCard last = null;
+        for (AbstractCard card : AbstractDungeon.player.hand.group) {
+            if (card.costForTurn >= 0) {
+                if (first == null) {
+                    first = card;
+                }
+                last = card;
+            }
+        }
+        if (first != null && last != null && first != last
+                && first.costForTurn != last.costForTurn) {
+            int firstCost = first.costForTurn;
+            first.setCostForTurn(last.costForTurn);
+            last.setCostForTurn(firstCost);
+            trigger();
+        }
+    }
+
+    private void weakenHighestIntentEnemy() {
+        AbstractMonster target = null;
+        for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+            if (monster != null && !monster.isDeadOrEscaped()
+                    && monster.intent != null && monster.intent.name().contains("ATTACK")
+                    && (target == null || monster.getIntentDmg() > target.getIntentDmg())) {
+                target = monster;
+            }
+        }
+        if (target != null) {
+            trigger();
+            addToBot(new ApplyPowerAction(target, AbstractDungeon.player,
+                    new WeakPower(target, 1, false)));
+        }
+    }
+
+    private void applyVulnerableToWeakestEnemy() {
+        AbstractMonster target = null;
+        for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+            if (monster != null && !monster.isDeadOrEscaped()
+                    && (target == null || monster.currentHealth < target.currentHealth)) {
+                target = monster;
+            }
+        }
+        if (target != null) {
+            trigger();
+            addToBot(new ApplyPowerAction(target, AbstractDungeon.player,
+                    new VulnerablePower(target, 1, false)));
+        }
     }
 
     private void playTopCard() {
@@ -230,7 +275,9 @@ public class NovelRelic extends SpireOdditiesRelic {
 
     @Override
     public void atBattleStart() {
-        this.counter = 0;
+        if (mode != Mode.SLOTTED_STONE) {
+            this.counter = 0;
+        }
         this.firstCard = null;
         this.storedCard = null;
         switch (mode) {
@@ -346,7 +393,6 @@ public class NovelRelic extends SpireOdditiesRelic {
             case CROWN_OF_THORNS:
             case BLUE_HOURGLASS:
             case PAINTED_MASK:
-            case TUNING_FORK:
             case BLACK_RIBBON:
             case CRACKED_BELLOWS:
             case HAUNTED_BOOKMARK:
@@ -371,12 +417,6 @@ public class NovelRelic extends SpireOdditiesRelic {
                 }
                 break;
             case SPARE_SPRING:
-                break;
-            case EMPTY_CROWN:
-                if (this.counter == 1) {
-                    draw(3);
-                }
-                this.counter = 0;
                 break;
             case PAPER_MOON:
                 if (this.counter == 1 && this.storedCard != null) {
@@ -443,6 +483,12 @@ public class NovelRelic extends SpireOdditiesRelic {
                     loseHp(1);
                 }
                 break;
+            case TUNING_FORK:
+                retuneHandCosts();
+                break;
+            case CHOIR_OF_NAILS:
+                weakenHighestIntentEnemy();
+                break;
             default:
                 break;
         }
@@ -471,11 +517,6 @@ public class NovelRelic extends SpireOdditiesRelic {
                     gainStrength(1);
                 }
                 break;
-            case TUNING_FORK:
-                if (this.counter == 0) {
-                    addRetainedRandomColorlessCardToHand();
-                }
-                break;
             case SOOT_CAGE:
                 if (AbstractDungeon.player.currentBlock > 0 && !AbstractDungeon.player.hand.isEmpty()) {
                     AbstractDungeon.player.hand.getRandomCard(AbstractDungeon.cardRandomRng).retain = true;
@@ -496,8 +537,18 @@ public class NovelRelic extends SpireOdditiesRelic {
                 break;
             case EMPTY_CROWN:
                 if (AbstractDungeon.player.energy.energy == 0) {
-                    this.counter = 1;
+                    applyVulnerableToWeakestEnemy();
                 }
+                break;
+            case FATES_THREAD:
+                if (this.storedCard != null && AbstractDungeon.player.hand.contains(this.storedCard)) {
+                    trigger();
+                    addToBot(new ExhaustSpecificCardAction(this.storedCard,
+                            AbstractDungeon.player.hand));
+                    addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
+                            new ArtifactPower(AbstractDungeon.player, 1)));
+                }
+                this.storedCard = null;
                 break;
             case PAPER_MOON:
                 if (AbstractDungeon.player.hand.size() == 1) {
@@ -527,11 +578,6 @@ public class NovelRelic extends SpireOdditiesRelic {
                 if (this.counter == 0 && card.costForTurn == 0) {
                     this.counter = 1;
                     gainBlock(4);
-                }
-                break;
-            case TUNING_FORK:
-                if (card.type == AbstractCard.CardType.ATTACK) {
-                    this.counter = 1;
                 }
                 break;
             case EMBER_PIN:
@@ -651,12 +697,6 @@ public class NovelRelic extends SpireOdditiesRelic {
                 }
                 break;
             case CHOIR_OF_NAILS:
-                this.counter++;
-                if (this.counter >= 6) {
-                    this.counter = 0;
-                    damageAll(4);
-                    applyVulnerableToAll(1);
-                }
                 break;
             case STORM_CHIME:
                 this.counter++;
@@ -699,8 +739,14 @@ public class NovelRelic extends SpireOdditiesRelic {
             case FATES_THREAD:
                 if (this.counter == 0 && card.type == AbstractCard.CardType.CURSE) {
                     this.counter = 1;
-                    gainEnergy(1);
-                    gainBlock(2);
+                    this.storedCard = card;
+                    card.retain = true;
+                }
+                break;
+            case LAST_MATCH:
+                if (this.counter == 0 && Burn.ID.equals(card.cardID)) {
+                    this.counter = 1;
+                    applyVulnerableToAll(1);
                 }
                 break;
             case PERMANENT_MARKER:
@@ -826,13 +872,6 @@ public class NovelRelic extends SpireOdditiesRelic {
                 if (this.counter == 0 && this.firstCard != null) {
                     this.counter = 1;
                     copyToHand(this.firstCard);
-                }
-                break;
-            case LAST_MATCH:
-                if (this.counter == 0) {
-                    this.counter = 1;
-                    gainEnergy(2);
-                    draw(3);
                 }
                 break;
             case TIDE_CLOCK:
@@ -1078,20 +1117,35 @@ public class NovelRelic extends SpireOdditiesRelic {
     @Override
     public void onEnterRoom(com.megacrit.cardcrawl.rooms.AbstractRoom room) {
         if (mode == Mode.STAINED_MAP && room instanceof EventRoom) {
-            gainGold(8);
+            this.stainedMapMarked = true;
         }
     }
 
     @Override
     public void onChestOpen(boolean bossChest) {
         if (mode == Mode.GREASED_KEY && !bossChest && AbstractDungeon.player.gold >= 5) {
-            AbstractDungeon.player.loseGold(5);
-            obtainRandomPotion();
+            ArrayList<AbstractCard> upgradeable = new ArrayList<>();
+            for (AbstractCard card : AbstractDungeon.player.masterDeck.group) {
+                if (card.canUpgrade()) {
+                    upgradeable.add(card);
+                }
+            }
+            if (!upgradeable.isEmpty()) {
+                AbstractDungeon.player.loseGold(5);
+                AbstractCard card = upgradeable.get(
+                        AbstractDungeon.cardRandomRng.random(upgradeable.size() - 1));
+                card.upgrade();
+                flash();
+            }
         }
     }
 
     @Override
     public void onVictory() {
+        if (mode == Mode.STAINED_MAP && this.stainedMapMarked) {
+            this.stainedMapMarked = false;
+            heal(4);
+        }
         switch (mode) {
             case DAMPENED_BELL:
                 heal(3);
@@ -1136,10 +1190,10 @@ public class NovelRelic extends SpireOdditiesRelic {
 
     @Override
     public void onChangeStance(AbstractStance previousStance, AbstractStance newStance) {
-        if (mode == Mode.FRACTURED_CROWN && this.counter == 0) {
+        if (mode == Mode.FRACTURED_CROWN && this.counter == 0
+                && previousStance != null && WrathStance.STANCE_ID.equals(previousStance.ID)) {
             this.counter = 1;
-            gainBlock(6);
-            draw(2);
+            damageAll(8);
         }
     }
 
@@ -1153,27 +1207,41 @@ public class NovelRelic extends SpireOdditiesRelic {
 
     @Override
     public void onObtainCard(AbstractCard card) {
-        if (mode == Mode.UNDERSTUDY_SEAL && card.rarity == AbstractCard.CardRarity.RARE
+        if (mode == Mode.LUCKY_SPLINTER && this.counter == 0
+                && card.rarity == AbstractCard.CardRarity.COMMON
+                && card.type == AbstractCard.CardType.SKILL && card.canUpgrade()) {
+            this.counter = 1;
+            card.upgrade();
+            flash();
+        } else if (mode == Mode.UNDERSTUDY_SEAL && card.rarity == AbstractCard.CardRarity.RARE
                 && !card.upgraded) {
             card.upgrade();
             flash();
         }
     }
 
-    @Override
-    public int changeNumberOfCardsInReward(int numberOfCards) {
-        if (mode == Mode.LUCKY_SPLINTER) {
-            return numberOfCards + 1;
+    public void onCardRewardSkipped() {
+        if (mode != Mode.SLOTTED_STONE) {
+            return;
         }
-        return numberOfCards;
-    }
-
-    @Override
-    public int changeRareCardRewardChance(int chance) {
-        if (mode == Mode.SLOTTED_STONE) {
-            return chance + 3;
+        ArrayList<AbstractCard> upgradeable = new ArrayList<>();
+        for (AbstractCard card : AbstractDungeon.player.masterDeck.group) {
+            if (card.canUpgrade()) {
+                upgradeable.add(card);
+            }
         }
-        return chance;
+        if (upgradeable.isEmpty()) {
+            this.counter = 1;
+            return;
+        }
+        this.counter++;
+        if (this.counter >= 2) {
+            this.counter = 0;
+            AbstractCard card = upgradeable.get(
+                    AbstractDungeon.cardRandomRng.random(upgradeable.size() - 1));
+            card.upgrade();
+            flash();
+        }
     }
 
     @Override

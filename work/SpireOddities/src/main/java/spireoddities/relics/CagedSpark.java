@@ -2,6 +2,8 @@ package spireoddities.relics;
 
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import spireoddities.SpireOddities;
 
@@ -19,17 +21,15 @@ public class CagedSpark extends SpireOdditiesRelic {
     }
 
     @Override
-    public void atTurnStart() {
-        this.counter = 0;
-    }
-
-    @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        this.counter++;
-        if (this.counter >= 5) {
-            this.counter = 0;
-            gainEnergy(1);
-            draw(1);
+        int energyCost = card.costForTurn == -1 ? card.energyOnUse : card.costForTurn;
+        boolean spendsEnergy = !card.freeToPlay() && !card.isInAutoplay
+                && !(AbstractDungeon.player.hasPower("Corruption")
+                && card.type == AbstractCard.CardType.SKILL);
+        if (this.counter == 0 && spendsEnergy && energyCost >= 2
+                && AbstractDungeon.player.energy.energy == energyCost) {
+            this.counter = 1;
+            gainPlayerPower(new ArtifactPower(AbstractDungeon.player, 1));
         }
     }
 
