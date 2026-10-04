@@ -38,7 +38,7 @@
     "NAME": "Empty Flask",
     "FLAVOR": "Empty, for now.",
     "DESCRIPTIONS": [
-      "Whenever you use a Potion, gain #b1 Strength."
+      "After you use a Potion, the next Attack you play creates a #b0-cost copy that Exhausts in your hand."
     ]
   },
   "SpireOddities:AshPouch": {
@@ -185,14 +185,14 @@
     "NAME": "Iron Ring",
     "FLAVOR": "It is not pretty, but it does not let go easily.",
     "DESCRIPTIONS": [
-      "The first time you lose HP each turn, gain #b1 Energy and put a Wound into your discard pile."
+      "After the first time you lose HP each turn, Retain the highest-cost card in your hand at end of turn."
     ]
   },
   "SpireOddities:TornCoinpurse": {
     "NAME": "Torn Coinpurse",
     "FLAVOR": "Every fallen coin leaves a mark.",
     "DESCRIPTIONS": [
-      "Whenever you gain Gold, gain #b1 Block."
+      "The first upgradeable card you buy at each shop is upgraded for free."
     ]
   },
   "SpireOddities:AshenNeedle": {
@@ -255,7 +255,7 @@
     "NAME": "Copper Button",
     "FLAVOR": "Before it falls, it still makes a sound.",
     "DESCRIPTIONS": [
-      "At the end of your turn, if you have no Energy, gain #b3 Block."
+      "If you end your turn with no Energy, store up to #b8 remaining Block and gain it at the start of your next turn."
     ]
   },
   "SpireOddities:MirrorShard": {
@@ -528,7 +528,7 @@
     "NAME": "Candle Stub",
     "FLAVOR": "A brief flame can still stop a blow.",
     "DESCRIPTIONS": [
-      "The first time you lose HP each turn, gain #b3 Block."
+      "The first time you lose HP each combat, your next Skill costs #b0."
     ]
   },
   "SpireOddities:TinCrown": {
@@ -997,14 +997,14 @@
     "NAME": "Glass Guillotine",
     "FLAVOR": "It falls only at the most dangerous height.",
     "DESCRIPTIONS": [
-      "The first time your HP drops to half or less each combat, gain #b1 Intangible and put #b2 Wounds into your discard pile."
+      "At the start of combat, put #b2 Wounds into your discard pile. At end of turn, the enemy with the most current HP gains #b1 Strength and takes #b12 damage."
     ]
   },
   "SpireOddities:BlackTide": {
     "NAME": "Black Tide",
     "FLAVOR": "The tide brings power and wreckage.",
     "DESCRIPTIONS": [
-      "At the start of combat, gain #b2 Strength and put #b2 Wounds into your discard pile."
+      "At the start of combat, gain #b2 Strength and put #b2 Wounds into your discard pile. Whenever an enemy dies, apply #b2 Weak and Vulnerable to all living enemies."
     ]
   },
   "SpireOddities:ChoirOfNails": {
@@ -1046,7 +1046,7 @@
     "NAME": "Hollow Contract",
     "FLAVOR": "A blank space remains where the signature should be.",
     "DESCRIPTIONS": [
-      "The first time you lose HP each combat, gain #b2 Energy and put a Regret into your discard pile."
+      "At the start of combat, put #b2 Regrets into your discard pile. For every #b8 HP you lose, deal #b12 damage to ALL enemies."
     ]
   },
   "SpireOddities:EngineOfMaybe": {
@@ -1081,7 +1081,7 @@
     "NAME": "Spider Bargain",
     "FLAVOR": "It gives two threads before waiting for you to step in.",
     "DESCRIPTIONS": [
-      "At the start of combat, gain #b2 Energy and put #b2 Wounds into your discard pile."
+      "At the start of combat, put #b2 Wounds into your discard pile. Every #b3 cards you Exhaust apply #b4 Poison to ALL enemies."
     ]
   },
   "SpireOddities:AtlasOfErrors": {

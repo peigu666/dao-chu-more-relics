@@ -12,9 +12,24 @@ public class CopperButton extends SpireOdditiesRelic {
     }
 
     @Override
+    public void atBattleStart() {
+        this.counter = 0;
+    }
+
+    @Override
+    public void atTurnStart() {
+        if (this.counter > 0) {
+            int storedBlock = this.counter;
+            this.counter = 0;
+            gainBlock(storedBlock);
+        }
+    }
+
+    @Override
     public void onPlayerEndTurn() {
-        if (AbstractDungeon.player.energy.energy == 0) {
-            gainBlock(3);
+        if (AbstractDungeon.player.energy.energy == 0 && AbstractDungeon.player.currentBlock > 0) {
+            this.counter = Math.min(8, AbstractDungeon.player.currentBlock);
+            trigger();
         }
     }
 

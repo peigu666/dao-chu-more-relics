@@ -28,8 +28,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
-import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
+import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
@@ -334,8 +334,15 @@ public class NovelRelic extends SpireOdditiesRelic {
                 addDiscardCard(new Wound());
                 addDiscardCard(new Wound());
                 break;
+            case GLASS_GUILLOTINE:
+                addDiscardCard(new Wound());
+                addDiscardCard(new Wound());
+                break;
+            case HOLLOW_CONTRACT:
+                addDiscardCard(new Regret());
+                addDiscardCard(new Regret());
+                break;
             case SPIDER_BARGAIN:
-                gainEnergy(2);
                 addDiscardCard(new Wound());
                 addDiscardCard(new Wound());
                 break;
@@ -380,7 +387,6 @@ public class NovelRelic extends SpireOdditiesRelic {
             case EMBER_PIN:
             case MOTH_WING:
             case BROKEN_RULER:
-            case CANDLE_STUB:
             case TIN_CROWN:
             case SOOT_MARK:
             case COPPER_LATCH:
@@ -502,6 +508,23 @@ public class NovelRelic extends SpireOdditiesRelic {
                     gainBlock(AbstractDungeon.player.energy.energy * 2);
                 }
                 break;
+            case GLASS_GUILLOTINE:
+                AbstractMonster target = null;
+                for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+                    if (monster != null && !monster.isDeadOrEscaped()
+                            && (target == null || monster.currentHealth > target.currentHealth)) {
+                        target = monster;
+                    }
+                }
+                if (target != null) {
+                    trigger();
+                    addToBot(new ApplyPowerAction(target, AbstractDungeon.player,
+                            new StrengthPower(target, 1)));
+                    addToBot(new DamageAction(target,
+                            new DamageInfo(AbstractDungeon.player, 12, DamageInfo.DamageType.THORNS),
+                            AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+                }
+                break;
             case PAPER_CROWN:
                 if (AbstractDungeon.player.hand.isEmpty()) {
                     this.counter = 1;
@@ -599,6 +622,13 @@ public class NovelRelic extends SpireOdditiesRelic {
                 if (this.counter == 0 && card.type == AbstractCard.CardType.POWER) {
                     this.counter = 1;
                     gainBlock(4);
+                }
+                break;
+            case CANDLE_STUB:
+                if (this.counter == 1 && card.type == AbstractCard.CardType.SKILL) {
+                    this.counter = 2;
+                    card.setCostForTurn(0);
+                    trigger();
                 }
                 break;
             case POCKET_CHALK:
@@ -828,6 +858,13 @@ public class NovelRelic extends SpireOdditiesRelic {
                 AbstractCard copy = randomDiscard();
                 copyToDrawTop(copy == null ? card : copy);
                 break;
+            case SPIDER_BARGAIN:
+                this.counter++;
+                if (this.counter >= 3) {
+                    this.counter = 0;
+                    poisonAll(4);
+                }
+                break;
             default:
                 break;
         }
@@ -1022,7 +1059,7 @@ public class NovelRelic extends SpireOdditiesRelic {
             case CANDLE_STUB:
                 if (this.counter == 0) {
                     this.counter = 1;
-                    gainBlock(3);
+                    flash();
                 }
                 break;
             case CROWN_OF_THORNS:
@@ -1036,20 +1073,11 @@ public class NovelRelic extends SpireOdditiesRelic {
                     this.counter = 1;
                 }
                 break;
-            case GLASS_GUILLOTINE:
-                if (this.counter == 0
-                        && AbstractDungeon.player.currentHealth <= AbstractDungeon.player.maxHealth / 2) {
-                    this.counter = 1;
-                    gainPlayerPower(new IntangiblePlayerPower(AbstractDungeon.player, 1));
-                    addDiscardCard(new Wound());
-                    addDiscardCard(new Wound());
-                }
-                break;
             case HOLLOW_CONTRACT:
-                if (this.counter == 0) {
-                    this.counter = 1;
-                    gainEnergy(2);
-                    addDiscardCard(new Regret());
+                this.counter += amount;
+                while (this.counter >= 8) {
+                    this.counter -= 8;
+                    damageAll(12);
                 }
                 break;
             default:
@@ -1121,6 +1149,28 @@ public class NovelRelic extends SpireOdditiesRelic {
         }
     }
 
+    private void spreadBlackTide() {
+        trigger();
+        for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+            if (monster != null && !monster.isDeadOrEscaped()) {
+                addToBot(new ApplyPowerAction(monster, AbstractDungeon.player,
+                        new WeakPower(monster, 2, false)));
+                addToBot(new ApplyPowerAction(monster, AbstractDungeon.player,
+                        new VulnerablePower(monster, 2, false)));
+            }
+        }
+    }
+
+    private void poisonAll(int amount) {
+        trigger();
+        for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+            if (monster != null && !monster.isDeadOrEscaped()) {
+                addToBot(new ApplyPowerAction(monster, AbstractDungeon.player,
+                        new PoisonPower(monster, AbstractDungeon.player, amount)));
+            }
+        }
+    }
+
     @Override
     public void onChestOpen(boolean bossChest) {
         if (mode == Mode.GREASED_KEY && !bossChest && AbstractDungeon.player.gold >= 5) {
@@ -1163,6 +1213,9 @@ public class NovelRelic extends SpireOdditiesRelic {
     @Override
     public void onMonsterDeath(AbstractMonster monster) {
         switch (mode) {
+            case BLACK_TIDE:
+                spreadBlackTide();
+                break;
             case POCKET_WHISTLE:
                 this.counter++;
                 if (this.counter == 2) {

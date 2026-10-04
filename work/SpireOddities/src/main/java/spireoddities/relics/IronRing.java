@@ -1,7 +1,6 @@
 package spireoddities.relics;
 
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
-import com.megacrit.cardcrawl.cards.status.Wound;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import spireoddities.SpireOddities;
@@ -20,18 +19,29 @@ public class IronRing extends SpireOdditiesRelic {
     }
 
     @Override
-    public void atTurnStart() {
-        this.counter = 0;
-    }
-
-    @Override
     public void onLoseHp(int amount) {
         if (amount > 0 && this.counter == 0) {
             this.counter = 1;
-            gainEnergy(1);
-            AbstractDungeon.actionManager.addToBottom(
-                    new MakeTempCardInDiscardAction(new Wound(), true));
+            flash();
         }
+    }
+
+    @Override
+    public void onPlayerEndTurn() {
+        if (this.counter == 1) {
+            AbstractCard highestCost = null;
+            for (AbstractCard card : AbstractDungeon.player.hand.group) {
+                if (card.costForTurn >= 0
+                        && (highestCost == null || card.costForTurn > highestCost.costForTurn)) {
+                    highestCost = card;
+                }
+            }
+            if (highestCost != null) {
+                highestCost.retain = true;
+                trigger();
+            }
+        }
+        this.counter = 0;
     }
 
     @Override

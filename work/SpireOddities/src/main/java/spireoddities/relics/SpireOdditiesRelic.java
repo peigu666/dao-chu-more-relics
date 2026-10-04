@@ -54,6 +54,13 @@ public abstract class SpireOdditiesRelic extends CustomRelic {
             case "SpireOddities:StormChime":
                 super.renderCounter(sb, inTopPanel);
                 break;
+            case "SpireOddities:CopperButton":
+            case "SpireOddities:HollowContract":
+            case "SpireOddities:SpiderBargain":
+                if (this.counter > 0) {
+                    super.renderCounter(sb, inTopPanel);
+                }
+                break;
             default:
                 break;
         }
