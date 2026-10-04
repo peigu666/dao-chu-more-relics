@@ -500,7 +500,7 @@
     "NAME": "Matchbook",
     "FLAVOR": "Sparks appear at the least suitable times.",
     "DESCRIPTIONS": [
-      "The first time your Block is broken each turn, deal #b5 damage to all enemies."
+      "The first time an enemy breaks your Block each turn, deal #b5 damage to ALL enemies."
     ]
   },
   "SpireOddities:RibbonLoop": {

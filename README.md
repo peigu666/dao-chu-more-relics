@@ -6,13 +6,13 @@
 
 GitHub 仓库：[peigu666/dao-chu-more-relics](https://github.com/peigu666/dao-chu-more-relics) · [版本与下载](https://github.com/peigu666/dao-chu-more-relics/releases)
 
-## 当前版本：0.10.0
+## 当前版本：0.11.0
 
 当前版本包含 163 件遗物：普通 62 件、罕见 57 件、稀有 40 件、Boss 4 件。其中 158 件进入共用遗物池，5 件进入对应职业池：静默猎手 1 件、故障机器人 2 件、观者 2 件。“黑潮”“玻璃断头台”“空白契约”和“蜘蛛交易”会进入原版 Boss 遗物选择；其他遗物按各自稀有度进入正常奖励池。
 
-0.10.0 保持遗物总数、Mod ID、遗物内部 ID、稀有度和图标不变，将两件重复玩法遗物改为回血效果。本文先完整介绍当前版本的全部遗物，再按 0.3.1 至 0.10.0 的顺序说明新增和变更内容。玩法对照见 [0.10.0 机制审查记录](RELIC_MECHANIC_AUDIT_0.10.0.md)。
+0.11.0 修复火柴簿触发对象与回合重置，并补充来源提示说明；保持遗物数量、名称、图片、ID、稀有度和遗物池不变。本文先完整介绍当前版本的全部遗物，再按 0.3.1 至 0.11.0 的顺序说明新增和变更内容。玩法对照见 [0.10.0 机制审查记录](RELIC_MECHANIC_AUDIT_0.10.0.md)。
 
-## 遗物一览（当前版本 0.10.0，共 163 件）
+## 遗物一览（当前版本 0.11.0，共 163 件）
 
 以下四张表是当前版本的完整遗物清单，不按加入版本拆分。
 
@@ -50,7 +50,7 @@ GitHub 仓库：[peigu666/dao-chu-more-relics](https://github.com/peigu666/dao-c
 | 断尺 | 每回合第一次打出费用至少为 2 的牌时，获得等同其费用的格挡。 |
 | 墨渍 | 每回合第一次消耗技能牌时，抽 1 张牌。 |
 | 松动齿轮 | 每场战斗第一次洗牌时，将一张随机无色牌置于弃牌堆；费用为 0 且会被消耗。 |
-| 火柴簿 | 每回合第一次格挡被打破时，对所有敌人造成 5 点伤害。 |
+| 火柴簿 | 每回合第一次有敌人击破你的格挡时，对所有敌人造成 5 点伤害。 |
 | 缎带环 | 回合结束时，如果手牌中有保留牌，获得 2 点格挡。 |
 | 干苹果 | 每场战斗第一次被治疗时，获得 1 点敏捷。 |
 | 纠缠钩 | 每回合第一次手动弃牌后，将弃牌堆一张随机牌置于抽牌堆顶。 |
@@ -276,6 +276,12 @@ GitHub 仓库：[peigu666/dao-chu-more-relics](https://github.com/peigu666/dao-c
 
 不增加遗物，不更改遗物名称、图片、ID、稀有度或遗物池。备用弹簧不再把首次受伤转成下回合抽牌，而是在每场战斗首次失去生命时回复 3 点；锡冠由每回合固定格挡改为前三张能力牌各回复 2 点。前者提供受伤后的有限回弹，后者奖励能力牌构筑。稀有度分布仍为普通 62、罕见 57、稀有 40、Boss 4。与 AKDsMoreRelics 的回血机制对照见 [0.10.0 机制审查记录](RELIC_MECHANIC_AUDIT_0.10.0.md)。
 
+### 0.11.0：火柴簿修复与来源提示说明
+
+火柴簿改为在敌人造成的伤害耗尽玩家格挡时触发，每回合限一次；修正原先监听敌人格挡、且计数整场战斗不重置的问题。说明文字明确指出是“敌人击破你的格挡”。
+
+遗物悬浮提示中的 Mod 名称及大图鉴里的“来自于哪个Mod?”框由 BaseMod 的 WhatMod 功能提供。要显示它们，请在 ModTheSpire 的 BaseMod 设置中启用“Enable mod name in tooltips”，并重启游戏。Mod 遗物显示其所属 Mod；原版遗物不会显示“道初 更多遗物”。
+
 ## Mod 玩法
 
 遗物不会改变角色的基础玩法，也不会要求玩家围绕某一件遗物强行构筑。拿到它们时，可以把它们当作原版遗物一样，根据当前牌组、路线和 Boss 选择是否调整策略。
@@ -289,18 +295,18 @@ GitHub 仓库：[peigu666/dao-chu-more-relics](https://github.com/peigu666/dao-c
 ## 安装与测试
 
 1. 安装并启用 ModTheSpire 和 BaseMod。
-2. 下载 SpireOddities-0.10.0.jar。
+2. 下载 SpireOddities-0.11.0.jar。
 3. 将 JAR 放入 Slay the Spire 的 mods 文件夹，例如 E:\SteamLibrary\steamapps\common\SlayTheSpire\mods。
 4. 启动 ModTheSpire，勾选 BaseMod 和“道初 更多遗物”，然后启动游戏。
 5. 正常开始任意原版角色即可测试。需要快速测试时，可以使用 BaseMod 控制台按遗物 ID 获取遗物，例如 SpireOddities:TightKnot 或 SpireOddities:RedString。
 
-SpireOddities-source-0.10.0.zip 是包含 Java 源码、双语文本和游戏运行图标的源码包，适合修改和构建；高分辨率原始美术图仍保留在 GitHub 完整仓库的 `work/SpireOddities/art-source/` 中，但不放入源码压缩包。源码包不是直接放入 mods 文件夹的成品。
+SpireOddities-source-0.11.0.zip 是包含 Java 源码、双语文本和游戏运行图标的源码包，适合修改和构建；高分辨率原始美术图仍保留在 GitHub 完整仓库的 `work/SpireOddities/art-source/` 中，但不放入源码压缩包。源码包不是直接放入 mods 文件夹的成品。
 
 ## 工程结构
 
 - work/SpireOddities/：Java 源码、双语文本、163 组遗物图标和轮廓图。
-- outputs/SpireOddities-0.10.0.jar：当前版本本地构建成品。
-- outputs/SpireOddities-source-0.10.0.zip：当前版本源工程压缩包。
+- outputs/SpireOddities-0.11.0.jar：当前版本本地构建成品。
+- outputs/SpireOddities-source-0.11.0.zip：当前版本源工程压缩包。
 
 ## 依赖与许可说明
 

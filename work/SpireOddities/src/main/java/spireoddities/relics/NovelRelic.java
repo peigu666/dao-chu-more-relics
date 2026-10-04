@@ -385,6 +385,7 @@ public class NovelRelic extends SpireOdditiesRelic {
         switch (mode) {
             case KNUCKLEBONE:
             case EMBER_PIN:
+            case MATCHBOOK:
             case MOTH_WING:
             case BROKEN_RULER:
             case SOOT_MARK:
@@ -1024,12 +1025,6 @@ public class NovelRelic extends SpireOdditiesRelic {
     @Override
     public void onBlockBroken(AbstractCreature creature) {
         switch (mode) {
-            case MATCHBOOK:
-                if (this.counter == 0) {
-                    this.counter = 1;
-                    damageAll(5);
-                }
-                break;
             case IRON_ACORN:
                 if (this.counter == 0) {
                     this.counter = 1;
@@ -1038,6 +1033,13 @@ public class NovelRelic extends SpireOdditiesRelic {
                 break;
             default:
                 break;
+        }
+    }
+
+    public void onPlayerBlockBroken() {
+        if (mode == Mode.MATCHBOOK && this.counter == 0) {
+            this.counter = 1;
+            damageAll(5);
         }
     }
 
